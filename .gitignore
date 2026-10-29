@@ -1,5 +1,4 @@
 .DS_Store
-Icon?
 .claude/
 node_modules/
 *.csv
