@@ -54,7 +54,14 @@ async function getSeason(lat, lon, year, south) {
   const url = `${API}?latitude=${lat}&longitude=${lon}&start_date=${iso(start)}&end_date=${iso(end)}` +
     `&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT&cell_selection=land&models=${MODEL}`;
   for (let attempt = 0; attempt < 8; attempt++) {
-    const res = await fetch(url);
+    const res = await fetch(url, { signal: AbortSignal.timeout(60000) }).catch((err) => {
+      console.log(`  network error (${err.cause?.code || err.name}), retrying`);
+      return null;
+    });
+    if (!res) {
+      await sleep(5000 * (attempt + 1));
+      continue;
+    }
     if (res.status === 429) {
       const body = await res.text();
       const wait = /hour/i.test(body) ? 10 * 60000 : /day/i.test(body) ? 60 * 60000 : 65000;
@@ -70,9 +77,10 @@ async function getSeason(lat, lon, year, south) {
     const cut = days === -1 ? x.length : days;
     return { elevation: d.elevation, x: x.slice(0, cut), n: mn.slice(0, cut), p: p.slice(0, cut).map((v) => v ?? 0) };
   }
-  throw new Error('gave up after repeated rate limits');
+  throw new Error('gave up after repeated errors');
 }
 
+const failed = [];
 for (const p of places) {
   if (only.length && !only.includes(p.key)) continue;
   const [lon, lat] = climatePoint(p).map((v) => +v.toFixed(3));
@@ -84,16 +92,24 @@ for (const p of places) {
 
   const lastYear = new Date(lastAvailable).getUTCFullYear() + (south ? 1 : 0);
   let fetched = 0;
-  for (let y = 1991; y <= lastYear; y++) {
-    if (doc.seasons[y]?.x.length >= len) continue; // finished season already stored
-    if (seasonStart(y, south) > lastAvailable) continue;
-    const s = await getSeason(lat, lon, y, south);
-    if (!s) continue;
-    doc.elevation = s.elevation;
-    doc.seasons[y] = { x: s.x, n: s.n, p: s.p };
-    fetched++;
+  try {
+    for (let y = 1991; y <= lastYear; y++) {
+      if (doc.seasons[y]?.x.length >= len) continue; // finished season already stored
+      if (seasonStart(y, south) > lastAvailable) continue;
+      const s = await getSeason(lat, lon, y, south);
+      if (!s) continue;
+      doc.elevation = s.elevation;
+      doc.seasons[y] = { x: s.x, n: s.n, p: s.p };
+      fetched++;
+    }
+  } catch (err) {
+    failed.push(p.key);
+    console.log(`${p.key}: ${err.message} — skipping for now`);
+    continue; // keep the previous file untouched
   }
   doc.updated = new Date().toISOString().slice(0, 10);
   fs.writeFileSync(file, JSON.stringify(doc));
   console.log(`${p.key.padEnd(24)} ${lat},${lon}  +${fetched} seasons  (${Object.keys(doc.seasons).length} total)`);
 }
+
+if (failed.length) console.log(`\nNot updated this run (will retry next time): ${failed.join(', ')}`);

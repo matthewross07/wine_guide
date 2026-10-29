@@ -33,6 +33,7 @@ jobs:
       - name: Fetch missing growing-season weather
         run: node scripts/build-climate.mjs
       - name: Commit changes
+        if: always() # keep partial progress even if a step failed
         run: |
           if [ -n "$(git status --porcelain data)" ]; then
             git config user.name "github-actions[bot]"
