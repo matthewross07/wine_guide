@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T03:35:03.473Z",
+ "generated": "2026-10-29T04:29:43.095Z",
  "places": [
   {
    "key": "saint-estephe",
@@ -14,7 +14,8 @@
       -0.6729,
       45.0463
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Margaux, Gironde, France"
     },
     {
      "name": "Saint-Julien",
@@ -23,7 +24,8 @@
       -0.7414,
       45.1649
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Saint-Julien-Beychevelle, Gironde, France"
     },
     {
      "name": "Pauillac",
@@ -32,7 +34,8 @@
       -0.7485,
       45.1996
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Pauillac, Gironde, France"
     },
     {
      "name": "Saint-Estèphe",
@@ -41,10 +44,14 @@
       -0.7707,
       45.2643
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Saint-Estèphe, Gironde, France"
     }
    ],
    "outline": "data/outlines/saint-estephe.geojson",
+   "outlineSpec": "{\"osm\":[\"Saint-Estèphe, Gironde, France\"]}",
+   "rivers": "data/rivers/saint-estephe.geojson",
+   "riversSpec": "[\"Gironde\",\"Garonne\"]",
    "bounds": [
     -0.8162,
     45.0463,
@@ -69,7 +76,8 @@
       -0.7485,
       45.1996
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Pauillac, Gironde, France"
     },
     {
      "name": "Saint-Estèphe",
@@ -78,7 +86,8 @@
       -0.7707,
       45.2643
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Saint-Estèphe, Gironde, France"
     },
     {
      "name": "Saint-Yzans",
@@ -87,7 +96,8 @@
       -0.8216,
       45.3226
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Saint-Yzans-de-Médoc, Gironde, France"
     },
     {
      "name": "Bégadan",
@@ -96,10 +106,14 @@
       -0.8953,
       45.3563
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Bégadan, Gironde, France"
     }
    ],
    "outline": "data/outlines/medoc.geojson",
+   "outlineSpec": "{\"osm\":[\"Bégadan, Gironde, France\",\"Saint-Christoly-Médoc, Gironde, France\",\"Saint-Yzans-de-Médoc, Gironde, France\",\"Civrac-en-Médoc, Gironde, France\",\"Blaignan-Prignac, Gironde, France\"]}",
+   "rivers": "data/rivers/medoc.geojson",
+   "riversSpec": "[\"Gironde\"]",
    "bounds": [
     -0.9664,
     45.1996,
@@ -124,7 +138,8 @@
       -0.2427,
       44.9134
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Libourne, Gironde, France"
     },
     {
      "name": "Pomerol",
@@ -133,7 +148,8 @@
       -0.2,
       44.9311
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Pomerol, Gironde, France"
     },
     {
      "name": "Néac",
@@ -142,7 +158,8 @@
       -0.1838,
       44.9353
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Néac, Gironde, France"
     },
     {
      "name": "Lalande-de-Pomerol",
@@ -151,10 +168,14 @@
       -0.2104,
       44.9561
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Lalande-de-Pomerol, Gironde, France"
     }
    ],
    "outline": "data/outlines/lalande-de-pomerol.geojson",
+   "outlineSpec": "{\"osm\":[\"Lalande-de-Pomerol, Gironde, France\",\"Néac, Gironde, France\"]}",
+   "rivers": "data/rivers/lalande-de-pomerol.geojson",
+   "riversSpec": "[\"Dordogne\",\"Isle\",\"Barbanne\"]",
    "bounds": [
     -0.2427,
     44.9134,
@@ -179,7 +200,8 @@
       -0.1561,
       44.8931
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Saint-Émilion, Gironde, France"
     },
     {
      "name": "Saint-Genès-de-Castillon",
@@ -188,7 +210,8 @@
       -0.0621,
       44.8981
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Saint-Genès-de-Castillon, Gironde, France"
     },
     {
      "name": "Saint-Magne-de-Castillon",
@@ -197,7 +220,8 @@
       -0.0686,
       44.864
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Saint-Magne-de-Castillon, Gironde, France"
     },
     {
      "name": "Castillon-la-Bataille",
@@ -206,10 +230,14 @@
       -0.0451,
       44.8533
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Castillon-la-Bataille, Gironde, France"
     }
    ],
    "outline": "data/outlines/castillon.geojson",
+   "outlineSpec": "{\"osm\":[\"Castillon-la-Bataille, Gironde, France\",\"Saint-Magne-de-Castillon, Gironde, France\",\"Belvès-de-Castillon, Gironde, France\",\"Sainte-Colombe, Gironde, France\",\"Saint-Genès-de-Castillon, Gironde, France\",\"Gardegan-et-Tourtirac, Gironde, France\",\"Saint-Philippe-d'Aiguilhe, Gironde, France\",\"Les Salles-de-Castillon, Gironde, France\",\"Monbadon, Gironde, France\"]}",
+   "rivers": "data/rivers/castillon.geojson",
+   "riversSpec": "[\"Dordogne\"]",
    "bounds": [
     -0.1561,
     44.8335,
@@ -234,7 +262,8 @@
       -0.5292,
       45.0122
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Ambès, Gironde, France"
     },
     {
      "name": "Bourg",
@@ -243,7 +272,8 @@
       -0.5596,
       45.0395
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Bourg, Gironde, France"
     },
     {
      "name": "Blaye",
@@ -252,10 +282,14 @@
       -0.6636,
       45.1271
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Blaye, Gironde, France"
     }
    ],
    "outline": "data/outlines/cotes-de-bourg.geojson",
+   "outlineSpec": "{\"osm\":[\"Bourg, Gironde, France\"]}",
+   "rivers": "data/rivers/cotes-de-bourg.geojson",
+   "riversSpec": "[\"Dordogne\",\"Garonne\",\"Gironde\"]",
    "bounds": [
     -0.6636,
     45.0122,
@@ -280,7 +314,8 @@
       -0.58,
       44.8412
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Bordeaux, France"
     },
     {
      "name": "Entre-Deux-Mers",
@@ -289,7 +324,8 @@
       -0.3483,
       44.7747
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Créon, Gironde, France"
     },
     {
      "name": "Saint-Émilion",
@@ -298,7 +334,8 @@
       -0.1561,
       44.8931
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Saint-Émilion, Gironde, France"
     },
     {
      "name": "Bourg",
@@ -307,7 +344,8 @@
       -0.5596,
       45.0395
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Bourg, Gironde, France"
     },
     {
      "name": "Pauillac",
@@ -316,10 +354,14 @@
       -0.7485,
       45.1996
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Pauillac, Gironde, France"
     }
    ],
    "outline": "data/outlines/bordeaux.geojson",
+   "outlineSpec": "{\"osm\":[\"Gironde, France\"]}",
+   "rivers": "data/rivers/bordeaux.geojson",
+   "riversSpec": "[\"Garonne\",\"Dordogne\",\"Gironde\"]",
    "bounds": [
     -1.265,
     44.1939,
@@ -344,7 +386,8 @@
       4.8059,
       43.9492
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Avignon, France"
     },
     {
      "name": "Sorgues",
@@ -353,7 +396,8 @@
       4.8725,
       44.0066
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Sorgues, Vaucluse, France"
     },
     {
      "name": "Châteauneuf-du-Pape",
@@ -362,7 +406,8 @@
       4.8317,
       44.056
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Châteauneuf-du-Pape, Vaucluse, France"
     },
     {
      "name": "Courthézon",
@@ -371,7 +416,8 @@
       4.8835,
       44.0867
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Courthézon, Vaucluse, France"
     },
     {
      "name": "Orange",
@@ -380,10 +426,14 @@
       4.8079,
       44.1371
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Orange, Vaucluse, France"
     }
    ],
    "outline": "data/outlines/chateauneuf-du-pape.geojson",
+   "outlineSpec": "{\"osm\":[\"Châteauneuf-du-Pape, Vaucluse, France\",\"Courthézon, Vaucluse, France\",\"Bédarrides, Vaucluse, France\"]}",
+   "rivers": "data/rivers/chateauneuf-du-pape.geojson",
+   "riversSpec": "[\"Rhône\",\"Ouvèze\"]",
    "bounds": [
     4.7873,
     43.9492,
@@ -408,7 +458,8 @@
       4.8442,
       45.5596
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Seyssuel, Isère, France"
     },
     {
      "name": "Vienne",
@@ -417,7 +468,8 @@
       4.8748,
       45.5252
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Vienne, Isère, France"
     },
     {
      "name": "Ampuis",
@@ -426,7 +478,8 @@
       4.8112,
       45.4889
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Ampuis, Rhône, France"
     },
     {
      "name": "Condrieu",
@@ -435,10 +488,14 @@
       4.7676,
       45.4624
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Condrieu, Rhône, France"
     }
    ],
    "outline": "data/outlines/seyssuel.geojson",
+   "outlineSpec": "{\"osm\":[\"Seyssuel, Isère, France\"]}",
+   "rivers": "data/rivers/seyssuel.geojson",
+   "riversSpec": "[\"Rhône\",\"Gère\"]",
    "bounds": [
     4.7676,
     45.4624,
@@ -463,7 +520,8 @@
       4.7115,
       46.2347
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Juliénas, Rhône, France"
     },
     {
      "name": "Fleurie",
@@ -472,7 +530,8 @@
       4.6981,
       46.192
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Fleurie, Rhône, France"
     },
     {
      "name": "Villié-Morgon",
@@ -481,7 +540,8 @@
       4.6813,
       46.1612
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Villié-Morgon, Rhône, France"
     },
     {
      "name": "Côte du Py",
@@ -490,10 +550,14 @@
       4.6386,
       46.1683
      ],
-     "src": "hand"
+     "src": "hand",
+     "q": "Côte du Py, Villié-Morgon, France"
     }
    ],
    "outline": "data/outlines/morgon.geojson",
+   "outlineSpec": "{\"osm\":[\"Villié-Morgon, Rhône, France\"]}",
+   "rivers": "data/rivers/morgon.geojson",
+   "riversSpec": "[\"Saône\"]",
    "bounds": [
     4.6192,
     46.1328,
@@ -518,7 +582,8 @@
       4.743,
       46.2453
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Saint-Amour-Bellevue, Saône-et-Loire, France"
     },
     {
      "name": "Juliénas",
@@ -527,7 +592,8 @@
       4.7115,
       46.2347
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Juliénas, Rhône, France"
     },
     {
      "name": "Jullié",
@@ -536,7 +602,8 @@
       4.6782,
       46.242
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Jullié, Rhône, France"
     },
     {
      "name": "Chénas",
@@ -545,10 +612,14 @@
       4.719,
       46.2119
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Chénas, Rhône, France"
     }
    ],
    "outline": "data/outlines/julienas.geojson",
+   "outlineSpec": "{\"osm\":[\"Juliénas, Rhône, France\",\"Jullié, Rhône, France\"]}",
+   "rivers": "data/rivers/julienas.geojson",
+   "riversSpec": "[\"Saône\"]",
    "bounds": [
     4.6303,
     46.2119,
@@ -573,7 +644,8 @@
       3.9529,
       49.0426
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Épernay, Marne, France"
     },
     {
      "name": "Chouilly",
@@ -582,7 +654,8 @@
       4.0095,
       49.0261
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Chouilly, Marne, France"
     },
     {
      "name": "Cramant",
@@ -591,7 +664,8 @@
       3.9921,
       48.9877
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Cramant, Marne, France"
     },
     {
      "name": "Avize",
@@ -600,7 +674,8 @@
       4.0101,
       48.9722
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Avize, Marne, France"
     },
     {
      "name": "Le Mesnil-sur-Oger",
@@ -609,10 +684,14 @@
       4.0212,
       48.9463
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Le Mesnil-sur-Oger, Marne, France"
     }
    ],
    "outline": "data/outlines/chouilly.geojson",
+   "outlineSpec": "{\"osm\":[\"Chouilly, Marne, France\",\"Cramant, Marne, France\",\"Avize, Marne, France\",\"Oger, Marne, France\",\"Le Mesnil-sur-Oger, Marne, France\"]}",
+   "rivers": "data/rivers/chouilly.geojson",
+   "riversSpec": "[\"Marne\"]",
    "bounds": [
     3.9529,
     48.926,
@@ -637,7 +716,8 @@
       4.3759,
       48.1127
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Bar-sur-Seine, Aube, France"
     },
     {
      "name": "Celles-sur-Ource",
@@ -646,7 +726,8 @@
       4.4006,
       48.0765
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Celles-sur-Ource, Aube, France"
     },
     {
      "name": "Les Riceys",
@@ -655,10 +736,14 @@
       4.3658,
       47.9945
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Les Riceys, Aube, France"
     }
    ],
    "outline": "data/outlines/cote-des-bar.geojson",
+   "outlineSpec": "{\"osm\":[\"Les Riceys, Aube, France\",\"Celles-sur-Ource, Aube, France\",\"Bar-sur-Seine, Aube, France\"]}",
+   "rivers": "data/rivers/cote-des-bar.geojson",
+   "riversSpec": "[\"Seine\",\"Ource\",\"Laignes\"]",
    "bounds": [
     4.3113,
     47.9558,
@@ -683,7 +768,8 @@
       7.298,
       48.1661
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Riquewihr, Haut-Rhin, France"
     },
     {
      "name": "Sigolsheim",
@@ -692,7 +778,8 @@
       7.314,
       48.1343
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Sigolsheim, Haut-Rhin, France"
     },
     {
      "name": "Kaysersberg",
@@ -701,7 +788,8 @@
       7.2411,
       48.1572
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Kaysersberg, Haut-Rhin, France"
     },
     {
      "name": "Turckheim",
@@ -710,7 +798,8 @@
       7.278,
       48.0878
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Turckheim, Haut-Rhin, France"
     },
     {
      "name": "Eguisheim",
@@ -719,10 +808,14 @@
       7.308,
       48.0448
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Eguisheim, Haut-Rhin, France"
     }
    ],
    "outline": "data/outlines/alsace.geojson",
+   "outlineSpec": "{\"osm\":[\"Sigolsheim, Haut-Rhin, France\",\"Kientzheim, Haut-Rhin, France\",\"Kaysersberg Vignoble, Haut-Rhin, France\"]}",
+   "rivers": "data/rivers/alsace.geojson",
+   "riversSpec": "[\"Weiss\",\"Fecht\"]",
    "bounds": [
     7.2014,
     48.0448,
@@ -747,7 +840,8 @@
       2.839,
       47.3307
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Sancerre, Cher, France"
     },
     {
      "name": "Pouilly-sur-Loire",
@@ -756,7 +850,8 @@
       2.9584,
       47.2814
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Pouilly-sur-Loire, Nièvre, France"
     },
     {
      "name": "Menetou-Salon",
@@ -765,9 +860,12 @@
       2.4886,
       47.2315
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Menetou-Salon, Cher, France"
     }
    ],
+   "rivers": "data/rivers/loire.geojson",
+   "riversSpec": "[\"Loire\"]",
    "bounds": [
     2.4886,
     47.2315,
@@ -792,7 +890,8 @@
       5.0415,
       47.3216
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Dijon, France"
     },
     {
      "name": "Gevrey-Chambertin",
@@ -801,7 +900,8 @@
       4.9706,
       47.2262
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Gevrey-Chambertin, Côte-d'Or, France"
     },
     {
      "name": "Nuits-Saint-Georges",
@@ -810,7 +910,8 @@
       4.949,
       47.1367
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Nuits-Saint-Georges, Côte-d'Or, France"
     },
     {
      "name": "Villers-la-Faye",
@@ -819,7 +920,8 @@
       4.8778,
       47.1055
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Villers-la-Faye, Côte-d'Or, France"
     },
     {
      "name": "Beaune",
@@ -828,9 +930,12 @@
       4.838,
       47.0239
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Beaune, Côte-d'Or, France"
     }
    ],
+   "rivers": "data/rivers/burgundy.geojson",
+   "riversSpec": "[\"Ouche\",\"Saône\"]",
    "bounds": [
     4.838,
     47.0239,
@@ -855,7 +960,8 @@
       8.0311,
       44.6866
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Alba, Cuneo, Italy"
     },
     {
      "name": "La Morra",
@@ -864,7 +970,8 @@
       7.9361,
       44.652
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "La Morra, Cuneo, Italy"
     },
     {
      "name": "Barolo",
@@ -873,7 +980,8 @@
       7.9394,
       44.6147
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Barolo, Cuneo, Italy"
     },
     {
      "name": "Castiglione Falletto",
@@ -882,7 +990,8 @@
       7.9737,
       44.6326
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Castiglione Falletto, Cuneo, Italy"
     },
     {
      "name": "Monforte d'Alba",
@@ -891,7 +1000,8 @@
       7.9739,
       44.5904
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Monforte d'Alba, Cuneo, Italy"
     },
     {
      "name": "Serralunga d'Alba",
@@ -900,10 +1010,14 @@
       7.9974,
       44.618
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Serralunga d'Alba, Cuneo, Italy"
     }
    ],
    "outline": "data/outlines/barolo.geojson",
+   "outlineSpec": "{\"osm\":[\"Barolo, Cuneo, Italy\",\"La Morra, Cuneo, Italy\",\"Castiglione Falletto, Cuneo, Italy\",\"Monforte d'Alba, Cuneo, Italy\",\"Serralunga d'Alba, Cuneo, Italy\"]}",
+   "rivers": "data/rivers/barolo.geojson",
+   "riversSpec": "[\"Tanaro\"]",
    "bounds": [
     7.8951,
     44.5573,
@@ -928,7 +1042,8 @@
       8.0311,
       44.6866
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Alba, Cuneo, Italy"
     },
     {
      "name": "Barbaresco",
@@ -937,7 +1052,8 @@
       8.0769,
       44.7193
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Barbaresco, Cuneo, Italy"
     },
     {
      "name": "Neive",
@@ -946,7 +1062,8 @@
       8.1152,
       44.7261
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Neive, Cuneo, Italy"
     },
     {
      "name": "Treiso",
@@ -955,10 +1072,14 @@
       8.0872,
       44.684
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Treiso, Cuneo, Italy"
     }
    ],
    "outline": "data/outlines/barbaresco.geojson",
+   "outlineSpec": "{\"osm\":[\"Barbaresco, Cuneo, Italy\",\"Neive, Cuneo, Italy\",\"Treiso, Cuneo, Italy\"]}",
+   "rivers": "data/rivers/barbaresco.geojson",
+   "riversSpec": "[\"Tanaro\"]",
    "bounds": [
     8.0311,
     44.6581,
@@ -983,7 +1104,8 @@
       8.0311,
       44.6866
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Alba, Cuneo, Italy"
     },
     {
      "name": "Vezza d'Alba",
@@ -992,7 +1114,8 @@
       7.9974,
       44.7659
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Vezza d'Alba, Cuneo, Italy"
     },
     {
      "name": "Canale",
@@ -1001,7 +1124,8 @@
       8.01,
       44.8021
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Canale, Cuneo, Italy"
     },
     {
      "name": "Montà",
@@ -1010,10 +1134,14 @@
       7.9469,
       44.8251
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Montà, Cuneo, Italy"
     }
    ],
    "outline": "data/outlines/roero.geojson",
+   "outlineSpec": "{\"osm\":[\"Canale, Cuneo, Italy\",\"Vezza d'Alba, Cuneo, Italy\",\"Montà, Cuneo, Italy\"]}",
+   "rivers": "data/rivers/roero.geojson",
+   "riversSpec": "[\"Tanaro\"]",
    "bounds": [
     7.9024,
     44.6866,
@@ -1038,7 +1166,8 @@
       11.5486,
       43.0857
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Torrenieri, Siena, Italy"
     },
     {
      "name": "Montalcino",
@@ -1047,7 +1176,8 @@
       11.4903,
       43.0576
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Montalcino, Siena, Italy"
     },
     {
      "name": "Castelnuovo dell'Abate",
@@ -1056,7 +1186,8 @@
       11.5165,
       42.9952
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Castelnuovo dell'Abate, Siena, Italy"
     },
     {
      "name": "Sant'Angelo in Colle",
@@ -1065,10 +1196,14 @@
       11.4605,
       42.994
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Sant'Angelo in Colle, Siena, Italy"
     }
    ],
    "outline": "data/outlines/montalcino.geojson",
+   "outlineSpec": "{\"osm\":[\"Montalcino, Siena, Italy\"]}",
+   "rivers": "data/rivers/montalcino.geojson",
+   "riversSpec": "[\"Orcia\",\"Ombrone\",\"Asso\"]",
    "bounds": [
     11.3498,
     42.9573,
@@ -1093,7 +1228,8 @@
       11.332,
       43.6069
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Greve in Chianti, Florence, Italy"
     },
     {
      "name": "Panzano",
@@ -1102,7 +1238,8 @@
       11.3159,
       43.5449
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Panzano in Chianti, Florence, Italy"
     },
     {
      "name": "Castellina in Chianti",
@@ -1111,7 +1248,8 @@
       11.2873,
       43.4692
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Castellina in Chianti, Siena, Italy"
     },
     {
      "name": "Radda in Chianti",
@@ -1120,7 +1258,8 @@
       11.3747,
       43.4871
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Radda in Chianti, Siena, Italy"
     },
     {
      "name": "Gaiole in Chianti",
@@ -1129,10 +1268,14 @@
       11.4342,
       43.4683
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Gaiole in Chianti, Siena, Italy"
     }
    ],
    "outline": "data/outlines/chianti-classico.geojson",
+   "outlineSpec": "{\"osm\":[\"Greve in Chianti, Florence, Italy\",\"Radda in Chianti, Siena, Italy\",\"Gaiole in Chianti, Siena, Italy\",\"Castellina in Chianti, Siena, Italy\"]}",
+   "rivers": "data/rivers/chianti-classico.geojson",
+   "riversSpec": "[\"Pesa\",\"Greve\",\"Arbia\"]",
    "bounds": [
     11.2053,
     43.3553,
@@ -1157,7 +1300,8 @@
       11.5676,
       43.5235
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Montevarchi, Arezzo, Italy"
     },
     {
      "name": "Mercatale Valdarno",
@@ -1166,7 +1310,8 @@
       11.5635,
       43.4789
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Mercatale Valdarno, Arezzo, Italy"
     },
     {
      "name": "Bucine",
@@ -1175,10 +1320,14 @@
       11.617,
       43.4792
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Bucine, Arezzo, Italy"
     }
    ],
    "outline": "data/outlines/valdarno.geojson",
+   "outlineSpec": "{\"osm\":[\"Bucine, Arezzo, Italy\"]}",
+   "rivers": "data/rivers/valdarno.geojson",
+   "riversSpec": "[\"Arno\",\"Ambra\"]",
    "bounds": [
     11.5293,
     43.3476,
@@ -1203,7 +1352,8 @@
       15.6557,
       40.9961
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Melfi, Potenza, Italy"
     },
     {
      "name": "Monte Vulture",
@@ -1212,7 +1362,8 @@
       15.6363,
       40.9507
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Monte Vulture, Basilicata, Italy"
     },
     {
      "name": "Rionero in Vulture",
@@ -1221,7 +1372,8 @@
       15.6694,
       40.9262
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Rionero in Vulture, Potenza, Italy"
     },
     {
      "name": "Barile",
@@ -1230,9 +1382,12 @@
       15.6727,
       40.9463
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Barile, Potenza, Italy"
     }
    ],
+   "rivers": "data/rivers/vulture.geojson",
+   "riversSpec": "[\"Ofanto\"]",
    "bounds": [
     15.6363,
     40.9262,
@@ -1257,7 +1412,8 @@
       13.2106,
       43.6774
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Senigallia, Ancona, Italy"
     },
     {
      "name": "Morro d'Alba",
@@ -1266,7 +1422,8 @@
       13.2182,
       43.6106
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Morro d'Alba, Ancona, Italy"
     },
     {
      "name": "Ancona",
@@ -1275,10 +1432,14 @@
       13.5189,
       43.6158
      ],
-     "src": "hand"
+     "src": "hand",
+     "q": "Ancona, Italy"
     }
    ],
    "outline": "data/outlines/morro-d-alba.geojson",
+   "outlineSpec": "{\"osm\":[\"Morro d'Alba, Ancona, Italy\"]}",
+   "rivers": "data/rivers/morro-d-alba.geojson",
+   "riversSpec": "[\"Misa\",\"Esino\"]",
    "bounds": [
     13.1884,
     43.5842,
@@ -1303,7 +1464,8 @@
       10.7914,
       45.1564
      ],
-     "src": "hand"
+     "src": "hand",
+     "q": "Mantova, Italy"
     },
     {
      "name": "Suzzara",
@@ -1312,7 +1474,8 @@
       10.7432,
       44.992
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Suzzara, Mantova, Italy"
     },
     {
      "name": "Quistello",
@@ -1321,9 +1484,12 @@
       10.9805,
       45.0066
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Quistello, Mantova, Italy"
     }
    ],
+   "rivers": "data/rivers/lambrusco-mantovano.geojson",
+   "riversSpec": "[\"Po\",\"Mincio\",\"Secchia\"]",
    "bounds": [
     10.7432,
     44.992,
@@ -1348,7 +1514,8 @@
       -2.8467,
       42.5769
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Haro, La Rioja, Spain"
     },
     {
      "name": "Briones",
@@ -1357,7 +1524,8 @@
       -2.7951,
       42.5205
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Briones, La Rioja, Spain"
     },
     {
      "name": "San Vicente de la Sonsierra",
@@ -1366,7 +1534,8 @@
       -2.7587,
       42.5624
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "San Vicente de la Sonsierra, La Rioja, Spain"
     },
     {
      "name": "Logroño",
@@ -1375,10 +1544,14 @@
       -2.4397,
       42.4661
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Logroño, Spain"
     }
    ],
    "outline": "data/outlines/rioja-alta.geojson",
+   "outlineSpec": "{\"osm\":[\"Haro, La Rioja, Spain\",\"Briones, La Rioja, Spain\"]}",
+   "rivers": "data/rivers/rioja-alta.geojson",
+   "riversSpec": "[\"Ebro\",\"Tirón\",\"Oja\"]",
    "bounds": [
     -2.9129,
     42.4661,
@@ -1403,7 +1576,8 @@
       -3.6851,
       41.6715
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Aranda de Duero, Burgos, Spain"
     },
     {
      "name": "Roa",
@@ -1412,7 +1586,8 @@
       -3.9284,
       41.6966
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Roa, Burgos, Spain"
     },
     {
      "name": "Peñafiel",
@@ -1421,7 +1596,8 @@
       -4.1216,
       41.5966
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Peñafiel, Valladolid, Spain"
     },
     {
      "name": "Pesquera de Duero",
@@ -1430,9 +1606,12 @@
       -4.1559,
       41.6416
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Pesquera de Duero, Valladolid, Spain"
     }
    ],
+   "rivers": "data/rivers/ribera-del-duero.geojson",
+   "riversSpec": "[\"Duero\"]",
    "bounds": [
     -4.1559,
     41.5966,
@@ -1457,7 +1636,8 @@
       -5.0005,
       41.5009
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Tordesillas, Valladolid, Spain"
     },
     {
      "name": "Rueda",
@@ -1466,7 +1646,8 @@
       -4.9598,
       41.413
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Rueda, Valladolid, Spain"
     },
     {
      "name": "La Seca",
@@ -1475,9 +1656,12 @@
       -4.9071,
       41.4144
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "La Seca, Valladolid, Spain"
     }
    ],
+   "rivers": "data/rivers/rueda.geojson",
+   "riversSpec": "[\"Duero\"]",
    "bounds": [
     -5.0005,
     41.413,
@@ -1502,7 +1686,8 @@
       -1.1002,
       39.4881
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Requena, Valencia, Spain"
     },
     {
      "name": "Utiel",
@@ -1511,7 +1696,8 @@
       -1.2052,
       39.5681
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Utiel, Valencia, Spain"
     },
     {
      "name": "Camporrobles",
@@ -1520,9 +1706,12 @@
       -1.4009,
       39.6472
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Camporrobles, Valencia, Spain"
     }
    ],
+   "rivers": "data/rivers/utiel-requena.geojson",
+   "riversSpec": "[\"Magro\"]",
    "bounds": [
     -1.4009,
     39.4881,
@@ -1547,7 +1736,8 @@
       -7.9139,
       40.6575
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Viseu, Portugal"
     },
     {
      "name": "Nelas",
@@ -1556,7 +1746,8 @@
       -7.8551,
       40.53
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Nelas, Portugal"
     },
     {
      "name": "Seia",
@@ -1565,7 +1756,8 @@
       -7.7028,
       40.4201
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Seia, Portugal"
     },
     {
      "name": "Torre",
@@ -1574,9 +1766,12 @@
       -7.6131,
       40.3217
      ],
-     "src": "hand"
+     "src": "hand",
+     "q": "Torre, Serra da Estrela, Portugal"
     }
    ],
+   "rivers": "data/rivers/dao-serra-da-estrela.geojson",
+   "riversSpec": "[\"Mondego\",\"Dão\",\"Alva\"]",
    "bounds": [
     -7.9139,
     40.3217,
@@ -1601,7 +1796,8 @@
       -7.9139,
       40.6575
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Viseu, Portugal"
     },
     {
      "name": "Silgueiros",
@@ -1610,7 +1806,8 @@
       -7.9554,
       40.5704
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Silgueiros, Viseu, Portugal"
     },
     {
      "name": "Nelas",
@@ -1619,7 +1816,8 @@
       -7.8551,
       40.53
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Nelas, Portugal"
     },
     {
      "name": "Mangualde",
@@ -1628,9 +1826,12 @@
       -7.7656,
       40.6035
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Mangualde, Portugal"
     }
    ],
+   "rivers": "data/rivers/dao.geojson",
+   "riversSpec": "[\"Dão\",\"Mondego\"]",
    "bounds": [
     -7.9554,
     40.53,
@@ -1655,7 +1856,8 @@
       -8.6064,
       41.9917
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Valença, Portugal"
     },
     {
      "name": "Monção",
@@ -1664,7 +1866,8 @@
       -8.4173,
       42.0279
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Monção, Portugal"
     },
     {
      "name": "Melgaço",
@@ -1673,9 +1876,12 @@
       -8.1966,
       42.0392
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Melgaço, Portugal"
     }
    ],
+   "rivers": "data/rivers/moncao-melgaco.geojson",
+   "riversSpec": "[\"Minho\",\"Miño\"]",
    "bounds": [
     -8.6064,
     41.9917,
@@ -1700,7 +1906,8 @@
       -8.3332,
       41.2079
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Paredes, Porto, Portugal"
     },
     {
      "name": "Penafiel",
@@ -1709,7 +1916,8 @@
       -8.2856,
       41.2062
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Penafiel, Portugal"
     },
     {
      "name": "Lousada",
@@ -1718,7 +1926,8 @@
       -8.2826,
       41.2774
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Lousada, Portugal"
     },
     {
      "name": "Felgueiras",
@@ -1727,9 +1936,12 @@
       -8.1989,
       41.3649
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Felgueiras, Portugal"
     }
    ],
+   "rivers": "data/rivers/sousa.geojson",
+   "riversSpec": "[\"Sousa\",\"Douro\",\"Tâmega\"]",
    "bounds": [
     -8.3332,
     41.2062,
@@ -1754,7 +1966,8 @@
       -8.7637,
       41.7181
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Viana do Castelo, Portugal"
     },
     {
      "name": "Ponte de Lima",
@@ -1763,7 +1976,8 @@
       -8.5735,
       41.7468
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Ponte de Lima, Portugal"
     },
     {
      "name": "Braga",
@@ -1772,7 +1986,8 @@
       -8.428,
       41.5511
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Braga, Portugal"
     },
     {
      "name": "Barcelos",
@@ -1781,9 +1996,12 @@
       -8.6192,
       41.5314
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Barcelos, Portugal"
     }
    ],
+   "rivers": "data/rivers/vinho-verde.geojson",
+   "riversSpec": "[\"Lima\",\"Cávado\",\"Neiva\"]",
    "bounds": [
     -8.7637,
     41.5314,
@@ -1808,7 +2026,8 @@
       -9.2607,
       39.0931
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Torres Vedras, Portugal"
     },
     {
      "name": "Bombarral",
@@ -1817,7 +2036,8 @@
       -9.1584,
       39.2671
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Bombarral, Portugal"
     },
     {
      "name": "Óbidos",
@@ -1826,9 +2046,12 @@
       -9.1572,
       39.362
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Óbidos, Portugal"
     }
    ],
+   "rivers": "data/rivers/lisboa.geojson",
+   "riversSpec": "[\"Sizandro\"]",
    "bounds": [
     -9.2607,
     39.0931,
@@ -1853,7 +2076,8 @@
       -122.8701,
       38.6107
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Healdsburg, California"
     },
     {
      "name": "Jimtown",
@@ -1862,7 +2086,8 @@
       -122.8197,
       38.6666
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Jimtown, Sonoma County, California"
     },
     {
      "name": "Geyserville",
@@ -1871,7 +2096,8 @@
       -122.901,
       38.7129
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Geyserville, California"
     },
     {
      "name": "Cloverdale",
@@ -1880,10 +2106,14 @@
       -123.0179,
       38.8065
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Cloverdale, California"
     }
    ],
    "outline": "data/outlines/alexander-valley.geojson",
+   "outlineSpec": "{\"ava\":\"alexander_valley\"}",
+   "rivers": "data/rivers/alexander-valley.geojson",
+   "riversSpec": "[\"Russian River\"]",
    "bounds": [
     -123.0812,
     38.6038,
@@ -1908,7 +2138,8 @@
       -122.8164,
       38.5471
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Windsor, California"
     },
     {
      "name": "Chalk Hill",
@@ -1917,7 +2148,8 @@
       -122.766,
       38.59
      ],
-     "src": "hand"
+     "src": "hand",
+     "q": "Chalk Hill Road, Healdsburg, California"
     },
     {
      "name": "Healdsburg",
@@ -1926,10 +2158,14 @@
       -122.8701,
       38.6107
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Healdsburg, California"
     }
    ],
    "outline": "data/outlines/chalk-hill.geojson",
+   "outlineSpec": "{\"ava\":\"chalk_hill\"}",
+   "rivers": "data/rivers/chalk-hill.geojson",
+   "riversSpec": "[\"Russian River\"]",
    "bounds": [
     -122.8701,
     38.508,
@@ -1954,7 +2190,8 @@
       -122.2869,
       38.2975
      ],
-     "src": "hand"
+     "src": "hand",
+     "q": "Napa, California"
     },
     {
      "name": "Yountville",
@@ -1963,7 +2200,8 @@
       -122.3595,
       38.4022
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Yountville, California"
     },
     {
      "name": "Oakville",
@@ -1972,7 +2210,8 @@
       -122.4071,
       38.4389
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Oakville, California"
     },
     {
      "name": "St. Helena",
@@ -1981,7 +2220,8 @@
       -122.47,
       38.5052
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "St. Helena, California"
     },
     {
      "name": "Pope Valley",
@@ -1990,7 +2230,8 @@
       -122.4278,
       38.6152
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Pope Valley, California"
     },
     {
      "name": "Calistoga",
@@ -1999,10 +2240,14 @@
       -122.5797,
       38.5788
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Calistoga, California"
     }
    ],
    "outline": "data/outlines/napa-valley.geojson",
+   "outlineSpec": "{\"ava\":\"napa_valley\"}",
+   "rivers": "data/rivers/napa-valley.geojson",
+   "riversSpec": "[\"Napa River\"]",
    "bounds": [
     -122.6468,
     38.1551,
@@ -2027,7 +2272,8 @@
       -120.7008,
       35.5605
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Templeton, California"
     },
     {
      "name": "Paso Robles",
@@ -2036,7 +2282,8 @@
       -120.6901,
       35.6263
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Paso Robles, California"
     },
     {
      "name": "Adelaida",
@@ -2045,10 +2292,14 @@
       -120.8735,
       35.6455
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Adelaida, California"
     }
    ],
    "outline": "data/outlines/paso-robles.geojson",
+   "outlineSpec": "{\"ava\":\"paso_robles\"}",
+   "rivers": "data/rivers/paso-robles.geojson",
+   "riversSpec": "[\"Salinas River\"]",
    "bounds": [
     -120.8735,
     35.3526,
@@ -2073,7 +2324,8 @@
       -121.4016,
       36.8525
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Hollister, California"
     },
     {
      "name": "Cienega Valley",
@@ -2082,7 +2334,8 @@
       -121.4024,
       36.8159
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Cienega Road, San Benito County, California"
     },
     {
      "name": "Lime Kiln Valley",
@@ -2091,10 +2344,14 @@
       -121.383,
       36.71
      ],
-     "src": "hand"
+     "src": "hand",
+     "q": "Lime Kiln Valley"
     }
    ],
    "outline": "data/outlines/lime-kiln-valley.geojson",
+   "outlineSpec": "{\"ava\":\"lime_kiln_valley\"}",
+   "rivers": "data/rivers/lime-kiln-valley.geojson",
+   "riversSpec": "[\"San Benito River\",\"Pajaro River\"]",
    "bounds": [
     -121.4024,
     36.6764,
@@ -2119,7 +2376,8 @@
       -119.4878,
       46.2632
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Benton City, Washington"
     },
     {
      "name": "Red Mountain",
@@ -2128,7 +2386,8 @@
       -119.4409,
       46.2979
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Red Mountain, Benton County, Washington"
     },
     {
      "name": "West Richland",
@@ -2137,10 +2396,14 @@
       -119.3473,
       46.3004
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "West Richland, Washington"
     }
    ],
    "outline": "data/outlines/red-mountain.geojson",
+   "outlineSpec": "{\"ava\":\"red_mountain\"}",
+   "rivers": "data/rivers/red-mountain.geojson",
+   "riversSpec": "[\"Yakima River\",\"Columbia River\"]",
    "bounds": [
     -119.4878,
     46.2558,
@@ -2165,7 +2428,8 @@
       -119.7692,
       46.2068
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Prosser, Washington"
     },
     {
      "name": "Alderdale",
@@ -2174,7 +2438,8 @@
       -119.9209,
       45.835
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Alderdale, Washington"
     },
     {
      "name": "Paterson",
@@ -2183,10 +2448,14 @@
       -119.6028,
       45.9371
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Paterson, Washington"
     }
    ],
    "outline": "data/outlines/horse-heaven-hills.geojson",
+   "outlineSpec": "{\"ava\":\"horse_heaven_hills\"}",
+   "rivers": "data/rivers/horse-heaven-hills.geojson",
+   "riversSpec": "[\"Columbia River\",\"Yakima River\"]",
    "bounds": [
     -120.2001,
     45.7895,
@@ -2211,7 +2480,8 @@
       -118.5858,
       46.0562
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Lowden, Washington"
     },
     {
      "name": "Walla Walla",
@@ -2220,7 +2490,8 @@
       -118.5174,
       46.2055
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Walla Walla, Washington"
     },
     {
      "name": "Milton-Freewater",
@@ -2229,10 +2500,14 @@
       -118.3878,
       45.9329
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Milton-Freewater, Oregon"
     }
    ],
    "outline": "data/outlines/walla-walla.geojson",
+   "outlineSpec": "{\"ava\":\"walla_walla_valley\"}",
+   "rivers": "data/rivers/walla-walla.geojson",
+   "riversSpec": "[\"Walla Walla River\",\"Touchet River\"]",
    "bounds": [
     -118.7429,
     45.8284,
@@ -2257,7 +2532,8 @@
       -120.5108,
       46.6016
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Yakima, Washington"
     },
     {
      "name": "Prosser",
@@ -2266,7 +2542,8 @@
       -119.7692,
       46.2068
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Prosser, Washington"
     },
     {
      "name": "Richland",
@@ -2275,7 +2552,8 @@
       -119.2752,
       46.2804
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Richland, Washington"
     },
     {
      "name": "Walla Walla",
@@ -2284,10 +2562,14 @@
       -118.5174,
       46.2055
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Walla Walla, Washington"
     }
    ],
    "outline": "data/outlines/columbia-valley.geojson",
+   "outlineSpec": "{\"ava\":\"columbia_valley\"}",
+   "rivers": "data/rivers/columbia-valley.geojson",
+   "riversSpec": "[\"Columbia River\",\"Yakima River\",\"Snake River\"]",
    "bounds": [
     -121.2971,
     45.2184,
@@ -2312,7 +2594,8 @@
       -122.9728,
       45.3003
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Newberg, Oregon"
     },
     {
      "name": "Dundee",
@@ -2321,7 +2604,8 @@
       -123.0109,
       45.2782
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Dundee, Oregon"
     },
     {
      "name": "McMinnville",
@@ -2330,7 +2614,8 @@
       -123.1945,
       45.21
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "McMinnville, Oregon"
     },
     {
      "name": "Eola-Amity Hills",
@@ -2339,7 +2624,8 @@
       -123.2056,
       45.1181
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Amity, Oregon"
     },
     {
      "name": "Salem",
@@ -2348,10 +2634,14 @@
       -123.0331,
       44.9392
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Salem, Oregon"
     }
    ],
    "outline": "data/outlines/willamette-valley.geojson",
+   "outlineSpec": "{\"ava\":\"willamette_valley\"}",
+   "rivers": "data/rivers/willamette-valley.geojson",
+   "riversSpec": "[\"Willamette River\",\"Yamhill River\"]",
    "bounds": [
     -123.7319,
     43.5761,
@@ -2376,7 +2666,8 @@
       -68.8458,
       -32.8895
      ],
-     "src": "hand"
+     "src": "hand",
+     "q": "Mendoza, Argentina"
     },
     {
      "name": "Tupungato",
@@ -2385,7 +2676,8 @@
       -69.147,
       -33.373
      ],
-     "src": "hand"
+     "src": "hand",
+     "q": "Tupungato, Mendoza, Argentina"
     },
     {
      "name": "Gualtallary",
@@ -2394,7 +2686,8 @@
       -69.2771,
       -33.3853
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Gualtallary, Tupungato, Argentina"
     },
     {
      "name": "Tupungato volcano",
@@ -2403,9 +2696,12 @@
       -69.7695,
       -33.3579
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Tupungato volcano"
     }
    ],
+   "rivers": "data/rivers/uco-valley.geojson",
+   "riversSpec": "[\"Tunuyán\",\"Mendoza\",\"Tupungato\"]",
    "bounds": [
     -69.7695,
     -33.3853,
@@ -2430,7 +2726,8 @@
       18.4172,
       -33.9288
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Cape Town, South Africa"
     },
     {
      "name": "Stellenbosch",
@@ -2439,7 +2736,8 @@
       18.8692,
       -33.9344
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Stellenbosch, South Africa"
     },
     {
      "name": "Franschhoek",
@@ -2448,7 +2746,8 @@
       19.1194,
       -33.9092
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Franschhoek, South Africa"
     },
     {
      "name": "Paarl",
@@ -2457,7 +2756,8 @@
       18.9642,
       -33.731
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Paarl, South Africa"
     },
     {
      "name": "Swartland",
@@ -2466,9 +2766,12 @@
       18.7236,
       -33.4603
      ],
-     "src": "osm"
+     "src": "osm",
+     "q": "Malmesbury, South Africa"
     }
    ],
+   "rivers": "data/rivers/western-cape.geojson",
+   "riversSpec": "[\"Berg River\",\"Eerste\",\"Breede\"]",
    "bounds": [
     18.4172,
     -33.9344,
