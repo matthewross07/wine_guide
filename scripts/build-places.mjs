@@ -13,11 +13,20 @@ import path from 'node:path';
 const SRC = 'data/places.src.json';
 const OUT = 'data/places.json';
 const OUTLINES = 'data/outlines';
+const RIVERS = 'data/rivers';
 const CACHE = 'scripts/.cache/geocode.json';
 const UA = 'wine-guide-build/1.0 (https://github.com/matthewross07/wine_guide)';
 
 const fresh = process.argv.includes('--fresh');
 const cache = !fresh && fs.existsSync(CACHE) ? JSON.parse(fs.readFileSync(CACHE, 'utf8')) : {};
+
+// Reuse what the previous build resolved (so CI doesn't re-geocode everything).
+if (!fresh && fs.existsSync(OUT)) {
+  for (const p of JSON.parse(fs.readFileSync(OUT, 'utf8')).places) {
+    for (const s of p.tour || []) if (s.q && s.src === 'osm') cache[`pt:${s.q}`] ??= { lon: s.at[0], lat: s.at[1] };
+    if (p.outline && p.outlineSpec && fs.existsSync(p.outline)) cache[`outline:${p.outlineSpec}`] ??= p.outline;
+  }
+}
 const saveCache = () => {
   fs.mkdirSync(path.dirname(CACHE), { recursive: true });
   fs.writeFileSync(CACHE, JSON.stringify(cache));
@@ -61,6 +70,32 @@ async function ava(id) {
     saveCache();
   }
   return cache[key];
+}
+
+// Main rivers near a place, from OpenStreetMap via Overpass.
+async function overpassRivers(names, [w, s, e, n]) {
+  const key = `rivers:${names.join('|')}:${[w, s, e, n].map((v) => v.toFixed(2)).join(',')}`;
+  if (key in cache) return cache[key];
+  const alt = names.map((x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
+  const q = `[out:json][timeout:90];way["waterway"="river"]["name"~"(^|[ '’])(${alt})($|[ ,])",i](${s},${w},${n},${e});out geom;`;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    await new Promise((r) => setTimeout(r, attempt ? 15000 * attempt : 2500));
+    const res = await fetch('https://overpass-api.de/api/interpreter', {
+      method: 'POST',
+      headers: { 'User-Agent': UA, 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `data=${encodeURIComponent(q)}`,
+    }).catch(() => null);
+    const text = res ? await res.text() : '';
+    if (!res?.ok || !text.startsWith('{')) continue; // busy: back off and retry
+    const lines = JSON.parse(text).elements
+      .filter((el) => el.geometry?.length > 1)
+      .map((el) => ({ name: el.tags.name, coords: el.geometry.map((g) => [g.lon, g.lat]) }));
+    cache[key] = lines;
+    saveCache();
+    return lines;
+  }
+  console.warn(`  Overpass gave up for ${names.join(', ')}`);
+  return null;
 }
 
 // ---- geometry helpers ----
@@ -121,6 +156,7 @@ const km = (a, b) => {
 
 // ---- main ----
 const src = JSON.parse(fs.readFileSync(SRC, 'utf8'));
+const prior = new Map(fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')).places.map((p) => [p.key, p]) : []);
 fs.mkdirSync(OUTLINES, { recursive: true });
 const places = [];
 
@@ -139,24 +175,64 @@ for (const p of src.places) {
       at = stop.at; how = 'hand';
     }
     if (!at) { console.warn(`  ${p.key} / ${stop.name}: not found, skipped`); continue; }
-    out.tour.push({ name: stop.name, note: stop.note, at, src: how });
+    out.tour.push({ name: stop.name, note: stop.note, at, src: how, q: stop.q });
   }
 
-  // Outline
-  const features = [];
-  if (p.outline?.ava) {
+  // Outline (skipped when the spec is unchanged and the file is already there)
+  const spec = p.outline ? JSON.stringify(p.outline) : null;
+  const reuse = spec && cache[`outline:${spec}`] === `${OUTLINES}/${p.key}.geojson`;
+  const features = reuse ? JSON.parse(fs.readFileSync(`${OUTLINES}/${p.key}.geojson`, 'utf8')).features : [];
+  if (!reuse && p.outline?.ava) {
     const a = await ava(p.outline.ava);
     features.push({ type: 'Feature', properties: { name: a.name }, geometry: simplify(a.geometry) });
   }
-  for (const q of p.outline?.osm || []) {
+  for (const q of reuse ? [] : p.outline?.osm || []) {
     const g = await nominatim(q, true).catch((e) => (console.warn(e.message), null));
     if (g) features.push({ type: 'Feature', properties: { name: g.name }, geometry: simplify(g.geometry) });
     else console.warn(`  ${p.key}: no boundary for ${q}`);
   }
   if (features.length) {
     const file = `${OUTLINES}/${p.key}.geojson`;
-    fs.writeFileSync(file, JSON.stringify({ type: 'FeatureCollection', features }));
+    if (!reuse) fs.writeFileSync(file, JSON.stringify({ type: 'FeatureCollection', features }));
     out.outline = file;
+    out.outlineSpec = spec;
+  }
+
+  // Rivers, clipped to a box around the region
+  if (p.rivers?.length) {
+    const rspec = JSON.stringify(p.rivers);
+    const file = `${RIVERS}/${p.key}.geojson`;
+    const prev = prior.get(p.key);
+    if (prev?.riversSpec === rspec && fs.existsSync(file)) {
+      out.rivers = file;
+      out.riversSpec = rspec;
+    } else {
+      const pts = [...features.map((f) => f.geometry.coordinates), ...out.tour.map((s) => [s.at])];
+      if (pts.length) {
+        const b = bboxOf(pts);
+        const padX = Math.max(0.12, (b[2] - b[0]) * 0.45), padY = Math.max(0.1, (b[3] - b[1]) * 0.45);
+        const box = [b[0] - padX, b[1] - padY, b[2] + padX, b[3] + padY];
+        const lines = await overpassRivers(p.rivers, box);
+        if (lines?.length) {
+          const tol = Math.max(0.0002, Math.hypot(box[2] - box[0], box[3] - box[1]) / 3000);
+          const byName = new Map();
+          for (const l of lines) {
+            const pts2 = simplifyRing(l.coords, tol);
+            if (pts2.length < 2) continue;
+            if (!byName.has(l.name)) byName.set(l.name, []);
+            byName.get(l.name).push(pts2);
+          }
+          const fc = {
+            type: 'FeatureCollection',
+            features: [...byName].map(([name, parts]) => ({ type: 'Feature', properties: { name }, geometry: { type: 'MultiLineString', coordinates: parts } })),
+          };
+          fs.mkdirSync(RIVERS, { recursive: true });
+          fs.writeFileSync(file, JSON.stringify(fc));
+          out.rivers = file;
+          out.riversSpec = rspec;
+        }
+      }
+    }
   }
 
   // Center + bounds from outline and tour stops

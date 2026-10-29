@@ -454,6 +454,17 @@ function openDrawer(id, slot = null) {
   document.body.classList.add('drawer-open');
   render();
   $('#drawer').scrollTop = 0;
+  warmExplore();
+}
+
+// Fetch the Explore code and map library in the background once someone is
+// browsing a wine, so the 3D view opens quickly.
+let warmed = false;
+function warmExplore() {
+  if (warmed || navigator.connection?.saveData) return;
+  warmed = true;
+  const go = () => import('./explore/map3d.js').then((m) => m.loadMapLibre()).then(() => import('./explore/explore.js')).catch(() => (warmed = false));
+  'requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 3000 }) : setTimeout(go, 1200);
 }
 
 function closeDrawer() {
@@ -892,6 +903,7 @@ async function openFromHash() {
 
 bind();
 window.addEventListener('hashchange', openFromHash);
+if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
 store.load().then(openFromHash).catch((err) => {
   $('#sync-status').textContent = `Couldn't load the collection: ${err.message}`;
 });

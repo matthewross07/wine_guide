@@ -2,7 +2,7 @@
 // vintage's growing season compares with normal and with the great years.
 // Loaded on demand (dynamic import) so the cellar map stays light.
 
-import { loadClimate, describe, rank } from './climate.js';
+import { loadClimate, describe, rank, normalFor } from './climate.js';
 import { placeFor, familyFor, getPlaces } from './places.js';
 import { temperatureChart, gddChart, rainChart, climateSpace, stripes, TIER_COLORS, tip } from './charts.js';
 import { Flyover } from './map3d.js';
@@ -128,9 +128,10 @@ export async function openExplore(wine, options) {
   const mapP = (async () => {
     await ensureMap({ center: place?.center, zoom: 1.4 });
     if (my !== token) return;
-    let outline = null;
-    if (place?.outline) outline = await fetch(place.outline).then((r) => r.json()).catch(() => null);
-    fly.show(place ? { ...place, outline } : null);
+    const geo = (url) => (url ? fetch(url).then((r) => r.json()).catch(() => null) : null);
+    const [outline, riverLines] = await Promise.all([geo(place?.outline), geo(place?.rivers)]);
+    if (my !== token) return;
+    fly.show(place ? { ...place, outline, riverLines } : null);
     if (!place) fly.globe?.();
   })();
 
@@ -239,7 +240,8 @@ function renderPanel(state) {
     year = latest.year;
   }
   const season = clim.seasons.find((s) => s.year === year);
-  const n = clim.normal;
+  const n = normalFor(clim, season);
+  const vsNormal = season.complete ? 'vs normal' : 'vs normal to date';
   const tier = tiers[year];
   const great = Object.entries(tiers).filter(([, t]) => t === 5).map(([y]) => +y).sort((a, b) => a - b);
   const match = closestGreat(clim, season, tiers);
@@ -255,7 +257,7 @@ function renderPanel(state) {
   const panel = $('.ex-panel', root);
   panel.innerHTML = `
     <div class="ex-section ex-hero">
-      <p class="ex-eyebrow">${esc(place.name)} · ${isVintage ? 'your vintage' : 'comparing'}${!season.complete ? ' · season in progress' : ''}</p>
+      <p class="ex-eyebrow">${esc(place.name)} · ${isVintage ? 'your vintage' : parseInt(wine.vintage, 10) ? 'comparing' : 'non-vintage'}${!season.complete ? ' · season in progress' : ''}</p>
       <h2 class="ex-h2">The ${year} growing season</h2>
       <p class="ex-lede">${describe(clim, season)}</p>
       ${note ? `<p class="ex-note">${note}</p>` : ''}
@@ -267,8 +269,8 @@ function renderPanel(state) {
     </div>
 
     <div class="ex-tiles">
-      ${tile('Heat', Math.round(season.gdd).toLocaleString(), ' °C·days', `${pct(season.gdd, n.gdd)} vs normal`, rankPhrase(season.complete ? rank(clim, 'gdd', season.gdd) : null, 'warm', 'cool'), season.gdd > n.gdd ? 'warm' : 'cool')}
-      ${tile('Season rain', Math.round(season.rain), ' mm', `${pct(season.rain, n.rain)} vs normal`, rankPhrase(season.complete ? rank(clim, 'rain', season.rain) : null, 'wett', 'dri'), season.rain > n.rain ? 'wet' : 'dry')}
+      ${tile('Heat', Math.round(season.gdd).toLocaleString(), ' °C·days', `${pct(season.gdd, n.gdd)} ${vsNormal}`, rankPhrase(season.complete ? rank(clim, 'gdd', season.gdd) : null, 'warm', 'cool'), season.gdd > n.gdd ? 'warm' : 'cool')}
+      ${tile('Season rain', Math.round(season.rain), ' mm', `${pct(season.rain, n.rain)} ${vsNormal}`, rankPhrase(season.complete ? rank(clim, 'rain', season.rain) : null, 'wett', 'dri'), season.rain > n.rain ? 'wet' : 'dry')}
       ${tile(clim.south ? 'Harvest rain · Mar–Apr' : 'Harvest rain · Sep–Oct', season.days >= clim.len - 61 ? Math.round(season.harvestRain) : '—', season.days >= clim.len - 61 ? ' mm' : '', season.days >= clim.len - 61 ? `${pct(season.harvestRain, n.harvestRain)} vs normal` : 'not yet', '', season.harvestRain > n.harvestRain ? 'wet' : 'dry')}
       ${tile('Hot days', season.heat, ' ≥ 35 °C', `normal ${Math.round(n.heat)}`, '')}
       ${tile('Spring frosts', season.frost, ' nights', `normal ${Math.round(n.frost)}`, '')}

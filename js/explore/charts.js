@@ -2,7 +2,7 @@
 // function returns a DOM element sized by viewBox, so it scales to its column.
 // Styling lives in css/explore.css (classes prefixed `c-`).
 
-import { smooth } from './climate.js';
+import { smooth, normalFor } from './climate.js';
 
 const NS = 'http://www.w3.org/2000/svg';
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -150,8 +150,11 @@ export function gddChart(clim, season, tiers = {}) {
   const ys = lin(0, yMax, H - B, T);
   const Y = (arr) => arr.map((v) => (v == null ? null : ys(v)));
   const great = complete.filter((s) => tiers[s.year] >= 5 && s.year !== season.year);
+  // Label only the great years nearest this vintage; the rest stay as lines.
+  const end = season.cumGdd.at(-1);
+  const labelled = [...great].sort((a, b) => Math.abs(a.cumGdd[season.days - 1] - end) - Math.abs(b.cumGdd[season.days - 1] - end)).slice(0, 5);
   const labels = spread([
-    ...great.map((s) => ({ y: ys(s.gdd), text: String(s.year), cls: 'c-lab-great', x: xs(s.days - 1) })),
+    ...labelled.map((s) => ({ y: ys(s.gdd), text: String(s.year), cls: 'c-lab-great', x: xs(s.days - 1) })),
     { y: ys(season.cumGdd.at(-1)), text: String(season.year), cls: 'c-lab-vintage', x: xs(season.days - 1) },
     { y: ys(clim.normal.gdd), text: 'normal', cls: 'c-lab-muted', x: xs(clim.len - 1) },
   ], 12);
@@ -159,7 +162,7 @@ export function gddChart(clim, season, tiers = {}) {
     ${yAxis(ys, niceTicks(0, yMax, 4), L, W - R, (v) => v.toLocaleString())}
     ${monthAxis(clim, xs, T, H - B)}
     ${complete.map((s) => `<path class="c-faint" d="${linePath(xs, Y(s.cumGdd))}"><title>${s.year}</title></path>`).join('')}
-    ${great.map((s) => `<path class="c-great" d="${linePath(xs, Y(s.cumGdd))}"/>`).join('')}
+    ${great.map((s) => `<path class="c-great" d="${linePath(xs, Y(s.cumGdd))}"><title>${s.year} · great vintage</title></path>`).join('')}
     <path class="c-normal" d="${linePath(xs, Y(clim.normal.cumGdd))}"/>
     <path class="c-vintage" d="${linePath(xs, Y(season.cumGdd))}"/>
     ${labels.map((l) => `<text class="c-endlab ${l.cls}" x="${Math.max(l.x, xs(clim.len - 1)) + 6}" y="${l.y + 4}">${l.text}</text>`).join('')}
@@ -273,8 +276,9 @@ export function stripes(clim, season, tiers, onPick) {
   const ss = clim.seasons;
   const W = 640, H = 92, T = 4, SH = 56;
   const w = W / ss.length;
+  const anomaly = (s) => s.mean - normalFor(clim, s).mean;
   const bars = ss.map((s, i) => {
-    const a = s.mean - clim.normal.mean;
+    const a = anomaly(s);
     const tier = tiers[s.year];
     const me = s.year === season.year;
     return `<g class="c-stripe${me ? ' me' : ''}" data-year="${s.year}">
@@ -289,9 +293,9 @@ export function stripes(clim, season, tiers, onPick) {
     <text class="c-axis" x="${W}" y="${H - 2}" text-anchor="end">${last}</text>`);
   el.querySelectorAll('.c-stripe').forEach((g) => {
     const s = ss.find((x) => x.year === +g.dataset.year);
-    const a = s.mean - clim.normal.mean;
+    const a = anomaly(s);
     const tier = tiers[s.year];
-    const html = `<b>${s.year}${s.complete ? '' : ' (so far)'}</b><span>${a >= 0 ? '+' : ''}${f1(a)} °C vs normal season</span>${tier ? `<span class="c-tip-muted">${['', 'Difficult', 'Mixed', 'Good', 'Excellent', 'Exceptional'][tier]} vintage</span>` : ''}`;
+    const html = `<b>${s.year}${s.complete ? '' : ' (so far)'}</b><span>${a >= 0 ? '+' : ''}${f1(a)} °C vs normal${s.complete ? ' season' : ' to date'}</span>${tier ? `<span class="c-tip-muted">${['', 'Difficult', 'Mixed', 'Good', 'Excellent', 'Exceptional'][tier]} vintage</span>` : ''}`;
     g.addEventListener('pointermove', (e) => tip(e, html));
     g.addEventListener('pointerleave', (e) => tip(e, null));
     g.addEventListener('click', () => onPick?.(s.year));

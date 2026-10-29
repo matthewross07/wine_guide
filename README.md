@@ -1,7 +1,7 @@
 # Cellar Book
 
-A map of the cellar, a tasting journal, and notes on every bottle. It's a static
-site with no build step, served free on GitHub Pages. The Google Sheet
+A map of the cellar, a tasting journal, and a 3D trip to where each wine comes from.
+It's a static site with no build step, served free on GitHub Pages. The Google Sheet
 *Wine Collection Inventory* stays the source of truth.
 
 **Site:** https://matthewross07.github.io/wine_guide/
@@ -15,6 +15,12 @@ site with no build step, served free on GitHub Pages. The Google Sheet
 - **Move / place bottles:** tap *Move* next to any location, then tap an empty spot (or
   another bottle to swap).
 - **Journal:** every tasting and note, newest first.
+- **Explore (3D + vintage weather):** from any wine, fly over its region on a 3D globe.
+  A guided tour visits the key villages. Beside it, a panel compares that vintage's growing
+  season (heat, rain, harvest rain, frost) with the 1991–2020 normal and with the region's
+  great years.
+- **Globe:** the globe button in the header shows every region in the cellar as a column of
+  light. Taller columns mean more bottles.
 
 ## How locations work
 
@@ -67,6 +73,32 @@ the URL stays the same.
 
 ## Day-to-day
 
+### Adding wines
+
+Just add rows to the sheet. Everything else follows:
+
+- **Cellar map:** new bottles show up under **Needs a spot**. Tap one, then tap a slot.
+- **Explore:** the wine's `region` is matched against `data/places.json`. A region the site
+  already knows gets the full treatment: tour, outline and precomputed weather. A region it
+  doesn't know is still placed on the map by geocoding the region text with OpenStreetMap, and
+  its weather is fetched live once, then cached in your browser. Write regions like
+  "Village/Appellation, Region, Country" for the best results.
+- **Vintage ratings:** `data/vintages.json` assigns a wine to a region family (Bordeaux,
+  Piedmont, Napa & Sonoma…) by regex. Add a family or edit a year's tier there.
+
+### Adding a region tour
+
+Edit `data/places.src.json`: copy a nearby entry, change `key`, `name`, `match` (a regex for
+the region text), `blurb`, and the `tour` stops (each a place name with a short note). Push
+it. The **Refresh region data** GitHub Action geocodes the stops, fetches the appellation
+outline (`ava` for US AVAs from the UC Davis project, `osm` for OpenStreetMap
+communes), downloads 35 years of growing-season weather, and commits the results.
+
+The same Action runs on the 3rd of each month to add the newest weather to every region.
+You can also run it by hand from the repo's **Actions** tab.
+
+### Everyday edits
+
 - **New wine:** add a row to the sheet with `bottles` filled in, and leave `id` and
   `locations` blank. The site gives it an id and lists it under **Needs a spot**. Tap it,
   then tap an empty slot.
@@ -87,7 +119,15 @@ node scripts/assign-layout.mjs /tmp/wines.csv
 
 # Write ids + locations back to the sheet (backs up Sheet1 first)
 WINE_GOOGLE_EMAIL=matthew.r.v.ross@gmail.com Rscript scripts/sheet-sync.R push
+
+# Explore data (normally the GitHub Action does these)
+node scripts/build-places.mjs     # data/places.src.json → data/places.json + data/outlines/
+node scripts/build-climate.mjs    # → data/climate/<region>.json (incremental)
 ```
+
+The weather comes from the free Open-Meteo archive (ERA5 reanalysis). Its free tier allows
+about 10,000 weighted calls a day, and a full 35-year history for one region costs about 165.
+`build-climate.mjs` paces itself and waits out rate limits.
 
 ## Local preview
 
@@ -106,7 +146,19 @@ js/app.js             UI: map, collection, journal, drawer, dialogs
 js/store.js           data: Apps Script sync, offline outbox, local mode
 js/storage.js         physical layout of fridge / rack / boxes (shared with scripts)
 js/config.js          Apps Script URL (optional), sheet link
+js/explore/           Explore view (loaded on demand)
+  explore.js            view + vintage panel
+  map3d.js              MapLibre globe, terrain, tour camera
+  charts.js             SVG charts (stripes, heat accumulation, temperature bands, rain, climate space)
+  climate.js            growing-season maths (GDD, rain, frost, normals)
+  places.js             wine → place / vintage family, live geocoding fallback
+css/explore.css       Explore styling
 data/wines.json       snapshot used before the sheet is connected
+data/places.src.json  hand-written regions + tours (edit this)
+data/places.json      built from the above (don't edit)
+data/outlines/        appellation boundaries (GeoJSON)
+data/climate/         growing-season weather per region
+data/vintages.json    vintage quality tiers by region family (edit freely)
 apps-script/Code.gs   Google Sheets backend
 scripts/              layout + sheet sync helpers
 ROADMAP.md            next layers, incl. the 3D region explorer

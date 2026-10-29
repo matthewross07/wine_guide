@@ -5,11 +5,13 @@
     "First match wins, so keep specific places above general ones.",
     "`tour` stops are geocoded by name; add \"at\": [lon, lat] to pin one by hand.",
     "`outline`: { \"ava\": \"napa_valley\" } (UC Davis AVA project) or { \"osm\": [\"Place, Country\", ...] } (OpenStreetMap boundaries).",
+    "`rivers`: river names to draw as glowing lines (OpenStreetMap waterway=river, matched loosely, within the region).",
     "Wines that match nothing are geocoded in the browser from the region text, so new wines still work."
   ],
   "places": [
     {
       "key": "saint-estephe", "name": "Saint-Estèphe", "match": "saint-est[eè]phe",
+      "rivers": ["Gironde", "Garonne"],
       "outline": { "osm": ["Saint-Estèphe, Gironde, France"] },
       "blurb": "The northernmost of the Médoc's great communes: clay over gravel, firm and long-lived Cabernet blends.",
       "tour": [
@@ -21,6 +23,7 @@
     },
     {
       "key": "medoc", "name": "Médoc", "match": "m[eé]doc",
+      "rivers": ["Gironde"],
       "outline": { "osm": ["Bégadan, Gironde, France", "Saint-Christoly-Médoc, Gironde, France", "Saint-Yzans-de-Médoc, Gironde, France", "Civrac-en-Médoc, Gironde, France", "Blaignan-Prignac, Gironde, France"] },
       "blurb": "The Médoc AOC proper is the northern Bas-Médoc: flatter land, more clay, generous Merlot.",
       "tour": [
@@ -32,6 +35,7 @@
     },
     {
       "key": "lalande-de-pomerol", "name": "Lalande-de-Pomerol", "match": "lalande",
+      "rivers": ["Dordogne", "Isle", "Barbanne"],
       "outline": { "osm": ["Lalande-de-Pomerol, Gironde, France", "Néac, Gironde, France"] },
       "blurb": "Pomerol's northern neighbour across the Barbanne stream: Merlot-led, plush, good value.",
       "tour": [
@@ -43,6 +47,7 @@
     },
     {
       "key": "castillon", "name": "Castillon-Côtes de Bordeaux", "match": "castillon",
+      "rivers": ["Dordogne"],
       "outline": { "osm": ["Castillon-la-Bataille, Gironde, France", "Saint-Magne-de-Castillon, Gironde, France", "Belvès-de-Castillon, Gironde, France", "Sainte-Colombe, Gironde, France", "Saint-Genès-de-Castillon, Gironde, France", "Gardegan-et-Tourtirac, Gironde, France", "Saint-Philippe-d'Aiguilhe, Gironde, France", "Les Salles-de-Castillon, Gironde, France", "Monbadon, Gironde, France"] },
       "blurb": "Saint-Émilion's limestone plateau continues east into Castillon: the same soils at a fraction of the price.",
       "tour": [
@@ -54,6 +59,7 @@
     },
     {
       "key": "cotes-de-bourg", "name": "Côtes de Bourg", "match": "bourg",
+      "rivers": ["Dordogne", "Garonne", "Gironde"],
       "outline": { "osm": ["Bourg, Gironde, France"] },
       "blurb": "Steep limestone slopes facing the Médoc across the Gironde: Merlot and Malbec with backbone.",
       "tour": [
@@ -64,6 +70,7 @@
     },
     {
       "key": "bordeaux", "name": "Bordeaux", "match": "bordeaux",
+      "rivers": ["Garonne", "Dordogne", "Gironde"],
       "outline": { "osm": ["Gironde, France"] },
       "blurb": "Two rivers, two banks: Cabernet on the Left Bank's gravel, Merlot on the Right Bank's clay and limestone.",
       "tour": [
@@ -76,6 +83,7 @@
     },
     {
       "key": "chateauneuf-du-pape", "name": "Châteauneuf-du-Pape", "match": "ch[aâ]teauneuf",
+      "rivers": ["Rhône", "Ouvèze"],
       "outline": { "osm": ["Châteauneuf-du-Pape, Vaucluse, France", "Courthézon, Vaucluse, France", "Bédarrides, Vaucluse, France"] },
       "blurb": "Grenache-led blends grown among the galets roulés, river stones that soak up the Provençal sun.",
       "tour": [
@@ -88,6 +96,7 @@
     },
     {
       "key": "seyssuel", "name": "Seyssuel · Northern Rhône", "match": "seyssuel|northern rh[oô]ne",
+      "rivers": ["Rhône", "Gère"],
       "outline": { "osm": ["Seyssuel, Isère, France"] },
       "blurb": "Steep schist terraces just north of Vienne, revived in the 1990s: Syrah in the style of nearby Côte-Rôtie.",
       "tour": [
@@ -99,6 +108,7 @@
     },
     {
       "key": "morgon", "name": "Morgon", "match": "morgon",
+      "rivers": ["Saône"],
       "outline": { "osm": ["Villié-Morgon, Rhône, France"] },
       "blurb": "The Beaujolais cru with the most structure, especially from the decomposed blue rock of the Côte du Py.",
       "tour": [
@@ -110,6 +120,7 @@
     },
     {
       "key": "julienas", "name": "Juliénas", "match": "juli[eé]nas",
+      "rivers": ["Saône"],
       "outline": { "osm": ["Juliénas, Rhône, France", "Jullié, Rhône, France"] },
       "blurb": "A northern Beaujolais cru on granite and schist: bright, spicy Gamay.",
       "tour": [
@@ -121,6 +132,7 @@
     },
     {
       "key": "chouilly", "name": "Chouilly · Côte des Blancs", "match": "chouilly|c[oô]te des blancs",
+      "rivers": ["Marne"],
       "outline": { "osm": ["Chouilly, Marne, France", "Cramant, Marne, France", "Avize, Marne, France", "Oger, Marne, France", "Le Mesnil-sur-Oger, Marne, France"] },
       "blurb": "Chalk slopes south of Épernay planted almost entirely to Chardonnay: the source of the finest Blanc de Blancs.",
       "tour": [
@@ -133,6 +145,7 @@
     },
     {
       "key": "cote-des-bar", "name": "Côte des Bar", "match": "c[oô]te des bar",
+      "rivers": ["Seine", "Ource", "Laignes"],
       "outline": { "osm": ["Les Riceys, Aube, France", "Celles-sur-Ource, Aube, France", "Bar-sur-Seine, Aube, France"] },
       "blurb": "Champagne's southern outpost in the Aube, on Kimmeridgian marl like Chablis: Pinot Noir country.",
       "tour": [
@@ -143,6 +156,7 @@
     },
     {
       "key": "alsace", "name": "Alsace", "match": "alsace",
+      "rivers": ["Weiss", "Fecht"],
       "outline": { "osm": ["Sigolsheim, Haut-Rhin, France", "Kientzheim, Haut-Rhin, France", "Kaysersberg Vignoble, Haut-Rhin, France"] },
       "blurb": "In the Vosges rain shadow, one of France's driest regions: aromatic whites from a mosaic of soils.",
       "tour": [
@@ -155,6 +169,7 @@
     },
     {
       "key": "loire", "name": "Loire Valley", "match": "loire",
+      "rivers": ["Loire"],
       "blurb": "France's longest river, with Sauvignon Blanc at its eastern end: flint and chalk around Sancerre.",
       "tour": [
         { "name": "Sancerre", "q": "Sancerre, Cher, France", "note": "Hilltop town above the Loire." },
@@ -164,6 +179,7 @@
     },
     {
       "key": "burgundy", "name": "Burgundy", "match": "burgund|bourgogne",
+      "rivers": ["Ouche", "Saône"],
       "blurb": "The Côte d'Or's narrow east-facing escarpment, with blackcurrant country (cassis) in the Hautes-Côtes behind it.",
       "tour": [
         { "name": "Dijon", "q": "Dijon, France", "note": "The capital, and the birthplace of crème de cassis." },
@@ -175,6 +191,7 @@
     },
     {
       "key": "barolo", "name": "Barolo", "match": "barolo|la morra",
+      "rivers": ["Tanaro"],
       "outline": { "osm": ["Barolo, Cuneo, Italy", "La Morra, Cuneo, Italy", "Castiglione Falletto, Cuneo, Italy", "Monforte d'Alba, Cuneo, Italy", "Serralunga d'Alba, Cuneo, Italy"] },
       "blurb": "Nebbiolo in the Langhe hills south of Alba: perfumed on the western sands, powerful on the eastern marls.",
       "tour": [
@@ -188,6 +205,7 @@
     },
     {
       "key": "barbaresco", "name": "Barbaresco", "match": "barbaresco",
+      "rivers": ["Tanaro"],
       "outline": { "osm": ["Barbaresco, Cuneo, Italy", "Neive, Cuneo, Italy", "Treiso, Cuneo, Italy"] },
       "blurb": "Barolo's neighbour across Alba: lower, warmer and closer to the Tanaro, so the Nebbiolo ripens earlier and is more approachable.",
       "tour": [
@@ -199,6 +217,7 @@
     },
     {
       "key": "roero", "name": "Roero", "match": "roero",
+      "rivers": ["Tanaro"],
       "outline": { "osm": ["Canale, Cuneo, Italy", "Vezza d'Alba, Cuneo, Italy", "Montà, Cuneo, Italy"] },
       "blurb": "Sandy hills north of the Tanaro, cut by dramatic gullies (the rocche): Arneis's homeland.",
       "tour": [
@@ -210,6 +229,7 @@
     },
     {
       "key": "montalcino", "name": "Montalcino", "match": "montalcino|brunello",
+      "rivers": ["Orcia", "Ombrone", "Asso"],
       "outline": { "osm": ["Montalcino, Siena, Italy"] },
       "blurb": "A single hilltop commune that is the whole Brunello zone: warm, dry, and shielded by Monte Amiata.",
       "tour": [
@@ -221,6 +241,7 @@
     },
     {
       "key": "chianti-classico", "name": "Chianti Classico", "match": "chianti",
+      "rivers": ["Pesa", "Greve", "Arbia"],
       "outline": { "osm": ["Greve in Chianti, Florence, Italy", "Radda in Chianti, Siena, Italy", "Gaiole in Chianti, Siena, Italy", "Castellina in Chianti, Siena, Italy"] },
       "blurb": "The Sangiovese heartland between Florence and Siena: galestro and alberese soils, oak woods and high hills.",
       "tour": [
@@ -233,6 +254,7 @@
     },
     {
       "key": "valdarno", "name": "Valdarno di Sopra", "match": "val d'arno|valdarno",
+      "rivers": ["Arno", "Ambra"],
       "outline": { "osm": ["Bucine, Arezzo, Italy"] },
       "blurb": "The upper Arno valley between the Chianti hills and the Pratomagno: one of Tuscany's oldest delimited wine areas (1716).",
       "tour": [
@@ -243,6 +265,7 @@
     },
     {
       "key": "vulture", "name": "Vulture", "match": "vulture|basilicata",
+      "rivers": ["Ofanto"],
       "blurb": "Volcanic slopes of the extinct Monte Vulture in Basilicata: ash and tuff soils, cool nights, Aglianico country.",
       "tour": [
         { "name": "Melfi", "q": "Melfi, Potenza, Italy", "note": "The Norman castle town." },
@@ -253,6 +276,7 @@
     },
     {
       "key": "morro-d-alba", "name": "Morro d'Alba", "match": "marche|morro d'alba|lacrima",
+      "rivers": ["Misa", "Esino"],
       "outline": { "osm": ["Morro d'Alba, Ancona, Italy"] },
       "blurb": "Rolling hills a few kilometres from the Adriatic: home of the rare, rose-scented Lacrima grape.",
       "tour": [
@@ -263,6 +287,7 @@
     },
     {
       "key": "lambrusco-mantovano", "name": "Lambrusco Mantovano", "match": "lombard|mantovan|lambrusco",
+      "rivers": ["Po", "Mincio", "Secchia"],
       "blurb": "Flat, fertile plain along the Po south of Mantua: Lambrusco's Lombard corner.",
       "tour": [
         { "name": "Mantua", "q": "Mantova, Italy", "at": [10.7914, 45.1564], "note": "The Gonzaga city, ringed by lakes." },
@@ -272,6 +297,7 @@
     },
     {
       "key": "rioja-alta", "name": "Rioja Alta", "match": "rioja",
+      "rivers": ["Ebro", "Tirón", "Oja"],
       "outline": { "osm": ["Haro, La Rioja, Spain", "Briones, La Rioja, Spain"] },
       "blurb": "The cooler, higher western Rioja along the Ebro: the home of long-aged traditional Tempranillo.",
       "tour": [
@@ -283,6 +309,7 @@
     },
     {
       "key": "ribera-del-duero", "name": "Ribera del Duero", "match": "ribera",
+      "rivers": ["Duero"],
       "blurb": "A high plateau (750–900 m) along the Duero: scorching days, frosty nights, concentrated Tempranillo.",
       "tour": [
         { "name": "Aranda de Duero", "q": "Aranda de Duero, Burgos, Spain", "note": "Medieval wine cellars beneath the town." },
@@ -293,6 +320,7 @@
     },
     {
       "key": "rueda", "name": "Rueda", "match": "rueda",
+      "rivers": ["Duero"],
       "blurb": "Stony, high plateau south of the Duero: crisp Verdejo.",
       "tour": [
         { "name": "Tordesillas", "q": "Tordesillas, Valladolid, Spain", "note": "On the Duero, where the 1494 treaty was signed." },
@@ -302,6 +330,7 @@
     },
     {
       "key": "utiel-requena", "name": "Utiel-Requena", "match": "utiel|requena",
+      "rivers": ["Magro"],
       "blurb": "Inland Valencia on a 700–900 m plateau: Bobal country, cool enough for bright rosado.",
       "tour": [
         { "name": "Requena", "q": "Requena, Valencia, Spain", "note": "A medieval quarter above old underground cellars." },
@@ -311,6 +340,7 @@
     },
     {
       "key": "dao-serra-da-estrela", "name": "Dão · Serra da Estrela", "match": "serra da estrela",
+      "rivers": ["Mondego", "Dão", "Alva"],
       "blurb": "Granite foothills of Portugal's highest mountains: high-altitude Dão with bright acidity.",
       "tour": [
         { "name": "Viseu", "q": "Viseu, Portugal", "note": "The Dão's capital." },
@@ -321,6 +351,7 @@
     },
     {
       "key": "dao", "name": "Dão", "match": "d[aã]o",
+      "rivers": ["Dão", "Mondego"],
       "blurb": "A granite plateau ringed by mountains, sheltered from both Atlantic rain and Spanish heat: Encruzado and Touriga Nacional.",
       "tour": [
         { "name": "Viseu", "q": "Viseu, Portugal", "note": "The Dão's capital." },
@@ -331,6 +362,7 @@
     },
     {
       "key": "moncao-melgaco", "name": "Monção e Melgaço", "match": "mon[cç][aã]o|melga[cç]o",
+      "rivers": ["Minho", "Miño"],
       "blurb": "Alvarinho's home on the Minho river, sheltered by hills from the Atlantic: richer and riper than other Vinho Verde.",
       "tour": [
         { "name": "Valença", "q": "Valença, Portugal", "note": "A fortress facing Spain across the Minho." },
@@ -340,6 +372,7 @@
     },
     {
       "key": "sousa", "name": "Vinho Verde · Sousa", "match": "sousa",
+      "rivers": ["Sousa", "Douro", "Tâmega"],
       "blurb": "The Sousa valley east of Porto: warmer, inland Vinho Verde.",
       "tour": [
         { "name": "Paredes", "q": "Paredes, Porto, Portugal", "note": "The southern Sousa valley." },
@@ -350,6 +383,7 @@
     },
     {
       "key": "vinho-verde", "name": "Vinho Verde · Minho", "match": "vinho verde|minho",
+      "rivers": ["Lima", "Cávado", "Neiva"],
       "blurb": "Green, rainy northwest Portugal, where Atlantic air keeps the whites low in alcohol and bright.",
       "tour": [
         { "name": "Viana do Castelo", "q": "Viana do Castelo, Portugal", "note": "Where the Lima river meets the Atlantic." },
@@ -360,6 +394,7 @@
     },
     {
       "key": "lisboa", "name": "Lisboa", "match": "lisboa|lisbon",
+      "rivers": ["Sizandro"],
       "blurb": "Atlantic-cooled hills north of Lisbon: fresh whites and easy reds.",
       "tour": [
         { "name": "Torres Vedras", "q": "Torres Vedras, Portugal", "note": "Part of Wellington's defensive lines." },
@@ -369,6 +404,7 @@
     },
     {
       "key": "alexander-valley", "name": "Alexander Valley", "match": "alexander valley",
+      "rivers": ["Russian River"],
       "outline": { "ava": "alexander_valley" },
       "blurb": "The warm upper Russian River valley in northern Sonoma: ripe Cabernet, and Chardonnay on the cooler benches.",
       "tour": [
@@ -380,6 +416,7 @@
     },
     {
       "key": "chalk-hill", "name": "Chalk Hill", "match": "chalk hill",
+      "rivers": ["Russian River"],
       "outline": { "ava": "chalk_hill" },
       "blurb": "Not chalk at all but white volcanic ash: a warm, hilly corner of the Russian River Valley.",
       "tour": [
@@ -390,6 +427,7 @@
     },
     {
       "key": "napa-valley", "name": "Napa Valley", "match": "napa",
+      "rivers": ["Napa River"],
       "outline": { "ava": "napa_valley" },
       "blurb": "Thirty miles of benchland between the Mayacamas and Vaca ranges, with San Pablo Bay fog cooling the south.",
       "tour": [
@@ -403,6 +441,7 @@
     },
     {
       "key": "paso-robles", "name": "Paso Robles", "match": "paso robles|central coast",
+      "rivers": ["Salinas River"],
       "outline": { "ava": "paso_robles" },
       "blurb": "Hot days and cold Pacific nights, with the widest daily temperature swing in California: Rhône and Bordeaux varieties.",
       "tour": [
@@ -413,6 +452,7 @@
     },
     {
       "key": "lime-kiln-valley", "name": "Lime Kiln Valley", "match": "lime kiln|san benito",
+      "rivers": ["San Benito River", "Pajaro River"],
       "outline": { "ava": "lime_kiln_valley" },
       "blurb": "A tiny AVA in the Gabilan range, on limestone and granite: old-vine Mourvèdre planted in the 1880s.",
       "tour": [
@@ -423,6 +463,7 @@
     },
     {
       "key": "red-mountain", "name": "Red Mountain", "match": "red mountain",
+      "rivers": ["Yakima River", "Columbia River"],
       "outline": { "ava": "red_mountain" },
       "blurb": "Washington's smallest, hottest AVA: a southwest-facing slope above the Yakima river making powerful Cabernet.",
       "tour": [
@@ -433,6 +474,7 @@
     },
     {
       "key": "horse-heaven-hills", "name": "Horse Heaven Hills", "match": "horse heaven",
+      "rivers": ["Columbia River", "Yakima River"],
       "outline": { "ava": "horse_heaven_hills" },
       "blurb": "Long south-facing slopes above the Columbia: river winds keep frost and disease away. Home of Champoux Vineyard.",
       "tour": [
@@ -443,6 +485,7 @@
     },
     {
       "key": "walla-walla", "name": "Walla Walla Valley", "match": "walla walla",
+      "rivers": ["Walla Walla River", "Touchet River"],
       "outline": { "ava": "walla_walla_valley" },
       "blurb": "A valley straddling Washington and Oregon, from windblown loess to the cobblestones of The Rocks.",
       "tour": [
@@ -453,6 +496,7 @@
     },
     {
       "key": "columbia-valley", "name": "Columbia Valley", "match": "columbia valley|washington|, wa",
+      "rivers": ["Columbia River", "Yakima River", "Snake River"],
       "outline": { "ava": "columbia_valley" },
       "blurb": "A vast, dry basin in the rain shadow of the Cascades, shaped by the Ice Age Missoula floods.",
       "tour": [
@@ -464,6 +508,7 @@
     },
     {
       "key": "willamette-valley", "name": "Willamette Valley", "match": "willamette|oregon|, or",
+      "rivers": ["Willamette River", "Yamhill River"],
       "outline": { "ava": "willamette_valley" },
       "blurb": "Marine air through the Van Duzer corridor and volcanic Jory soils: Oregon Pinot Noir and Pinot Gris.",
       "tour": [
@@ -476,6 +521,7 @@
     },
     {
       "key": "uco-valley", "name": "Uco Valley · Gualtallary", "match": "gualtallary|uco|mendoza",
+      "rivers": ["Tunuyán", "Mendoza", "Tupungato"],
       "blurb": "High-altitude Malbec under the Andes (Gualtallary reaches 1,500 m): limestone, intense light, cold nights.",
       "tour": [
         { "name": "Mendoza", "q": "Mendoza, Argentina", "at": [-68.8458, -32.8895], "note": "The oasis city, watered by Andean snowmelt." },
@@ -486,6 +532,7 @@
     },
     {
       "key": "western-cape", "name": "Western Cape", "match": "western cape|south africa|stellenbosch|swartland",
+      "rivers": ["Berg River", "Eerste", "Breede"],
       "blurb": "Cape mountains and two oceans: Chenin Blanc is the Cape's signature, from old bush vines.",
       "tour": [
         { "name": "Cape Town", "q": "Cape Town, South Africa", "note": "Table Mountain and the Atlantic." },

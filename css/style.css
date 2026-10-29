@@ -73,7 +73,7 @@ p { margin: 0; }
   display: flex;
   align-items: center;
   gap: 24px;
-  padding-top: 26px;
+  padding-top: max(26px, env(safe-area-inset-top));
   padding-bottom: 18px;
 }
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; margin-right: auto; min-width: 0; flex: 1 1 0; }

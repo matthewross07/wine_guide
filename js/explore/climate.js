@@ -22,7 +22,7 @@ export const seasonStart = (year, south) =>
 // ---------- data sources ----------
 
 const API = 'https://archive-api.open-meteo.com/v1/archive';
-const CACHE = 'wg-climate-v1';
+const CACHE = 'wg-climate-v2';
 
 async function cachedFetch(url) {
   const cache = typeof caches !== 'undefined' ? await caches.open(CACHE).catch(() => null) : null;
@@ -40,7 +40,7 @@ async function liveSeasons(lat, lon) {
   const now = new Date();
   const end = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1) - DAY); // monthly-stable URL
   const url = `${API}?latitude=${lat.toFixed(2)}&longitude=${lon.toFixed(2)}&start_date=1990-10-01` +
-    `&end_date=${end.toISOString().slice(0, 10)}&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT&cell_selection=land`;
+    `&end_date=${end.toISOString().slice(0, 10)}&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT&cell_selection=land&models=era5_seamless`;
   const d = await cachedFetch(url);
   const t0 = Date.parse(`${d.daily.time[0]}T00:00:00Z`);
   const south = lat < 0;
@@ -106,7 +106,7 @@ function analyze(data) {
     .map(([y, s]) => {
       const days = s.x.length;
       let gdd = 0, rain = 0, heat = 0, frost = 0, harvestRain = 0, meanSum = 0;
-      const cumGdd = [];
+      const cumGdd = [], cumRain = [], cumMean = [];
       for (let k = 0; k < days; k++) {
         const mean = (s.x[k] + s.n[k]) / 2;
         meanSum += mean;
@@ -116,6 +116,8 @@ function analyze(data) {
         if (k < 61 && s.n[k] < 0) frost++;
         if (k >= len - 61) harvestRain += s.p[k];
         cumGdd.push(gdd);
+        cumRain.push(rain);
+        cumMean.push(meanSum);
       }
       const months = monthStarts.slice(0, 7).map((a, m) => {
         const b = monthStarts[m + 1];
@@ -127,7 +129,7 @@ function analyze(data) {
       return {
         year: +y, days, complete: days >= len - 1,
         gdd, rain, heat, frost, harvestRain, mean: days ? meanSum / days : null,
-        tmax: s.x, tmin: s.n, prcp: s.p, cumGdd, months,
+        tmax: s.x, tmin: s.n, prcp: s.p, cumGdd, cumRain, cumMean, months,
       };
     })
     .filter((s) => s.days > 20)
@@ -147,6 +149,8 @@ function analyze(data) {
     tmax: band('tmax'),
     tmin: band('tmin'),
     cumGdd: Array.from({ length: len }, (_, k) => median(base.map((s) => s.cumGdd[k]))),
+    cumRain: Array.from({ length: len }, (_, k) => median(base.map((s) => s.cumRain[k]))),
+    cumMean: Array.from({ length: len }, (_, k) => median(base.map((s) => s.cumMean[k]))),
     months: Array.from({ length: 7 }, (_, m) => median(base.map((s) => s.months[m]))),
   };
   for (const k of ['gdd', 'rain', 'harvestRain', 'heat', 'frost', 'mean']) normal[k] = median(base.map((s) => s[k]));
@@ -164,18 +168,27 @@ export function rank(clim, key, value) {
   return vals.filter((v) => v < value).length / (vals.length - 1);
 }
 
+// Normals to compare a season against: the full season, or — for a season
+// still under way — the normal up to the same day.
+export function normalFor(clim, s) {
+  const n = clim.normal;
+  if (s.complete) return n;
+  const k = Math.max(0, s.days - 1);
+  return { ...n, gdd: n.cumGdd[k], rain: n.cumRain[k], mean: n.cumMean[k] / s.days };
+}
+
 // One plain-language line about the season.
 export function describe(clim, s) {
-  const n = clim.normal;
+  const n = normalFor(clim, s);
   const warm = (s.gdd - n.gdd) / n.gdd;
   const wet = (s.rain - n.rain) / Math.max(1, n.rain);
   const hw = (s.harvestRain - n.harvestRain) / Math.max(1, n.harvestRain);
   const temp = warm > 0.12 ? 'A hot' : warm > 0.05 ? 'A warm' : warm < -0.08 ? 'A cool' : warm < -0.03 ? 'A slightly cool' : 'A near-normal';
   const rain = wet > 0.3 ? 'very wet' : wet > 0.1 ? 'wet' : wet < -0.3 ? 'very dry' : wet < -0.1 ? 'dry' : 'normally rainy';
-  const bits = [`${temp}, ${rain} growing season`];
+  const bits = [`${temp}, ${rain} growing season${s.complete ? '' : ' so far'}`];
   if (hw > 0.4) bits.push('with a rainy harvest');
   else if (hw < -0.4) bits.push('with a dry harvest');
   if (s.frost >= 2 && s.frost > n.frost + 1) bits.push(`and ${s.frost} spring frost nights`);
-  if (s.heat >= 4 && s.heat > n.heat * 2 + 1) bits.push(`and ${s.heat} days above 35 °C`);
+  if (s.heat >= 4 && s.heat > n.heat * 2 + 1) bits.push(`and ${s.heat} days above 35\u00a0°C`);
   return `${bits.join(' ')}.`;
 }

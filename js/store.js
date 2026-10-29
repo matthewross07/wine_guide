@@ -224,7 +224,7 @@ class Store extends EventTarget {
     };
 
     if (op.action === 'drink') {
-      const i = op.slot ? w.locs.indexOf(op.slot) : w.locs.length - 1;
+      const i = op.slot ? w.locs.indexOf(op.slot) : w.bottles > w.locs.length ? -1 : w.locs.length - 1;
       if (i >= 0) w.locs.splice(i, 1);
       w.bottles = Math.max(0, w.bottles - 1);
       this.log.push(logEntry('drank'));

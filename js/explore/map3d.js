@@ -159,10 +159,29 @@ export class Flyover {
 
     const empty = { type: 'FeatureCollection', features: [] };
     this.map.addSource('outline', { type: 'geojson', data: empty });
+    this.map.addSource('rivers', { type: 'geojson', data: empty });
     this.map.addSource('cellar', { type: 'geojson', data: empty });
     this.map.addSource('cellar-pillars', { type: 'geojson', data: empty });
     this.map.addSource('stops', { type: 'geojson', data: empty });
 
+    // Rivers glow like sonic_ray's: a wide soft halo under a bright core.
+    this.map.addLayer({
+      id: 'river-glow', type: 'line', source: 'rivers', layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: {
+        'line-color': '#3d9bff',
+        'line-width': ['interpolate', ['exponential', 1.6], ['zoom'], 5, 3, 10, 12, 14, 30],
+        'line-blur': ['interpolate', ['linear'], ['zoom'], 5, 3, 14, 22],
+        'line-opacity': 0.5,
+      },
+    });
+    this.map.addLayer({
+      id: 'river-core', type: 'line', source: 'rivers', layout: { 'line-cap': 'round', 'line-join': 'round' },
+      paint: {
+        'line-color': '#c6ecff',
+        'line-width': ['interpolate', ['exponential', 1.6], ['zoom'], 5, 0.6, 10, 1.6, 14, 3.5],
+        'line-opacity': 0.95,
+      },
+    });
     this.map.addLayer({ id: 'outline-fill', type: 'fill', source: 'outline', paint: { 'fill-color': '#f0c86e', 'fill-opacity': 0.06 } });
     this.map.addLayer({ id: 'outline-glow', type: 'line', source: 'outline', paint: { 'line-color': '#f3c97a', 'line-width': 9, 'line-blur': 8, 'line-opacity': 0.45 } });
     this.map.addLayer({ id: 'outline-line', type: 'line', source: 'outline', paint: { 'line-color': '#ffe8b8', 'line-width': 1.3, 'line-opacity': 0.9 } });
@@ -211,10 +230,18 @@ export class Flyover {
       },
     });
 
+    const pop = new maplibregl.Popup({ closeButton: false, closeOnClick: false, className: 'fx-pop', offset: 14 });
     for (const id of ['cellar-glow', 'cellar-pillars']) {
       this.map.on('click', id, (e) => this.onPickPlace(e.features[0].properties.key));
-      this.map.on('mouseenter', id, () => (this.map.getCanvas().style.cursor = 'pointer'));
-      this.map.on('mouseleave', id, () => (this.map.getCanvas().style.cursor = ''));
+      this.map.on('mousemove', id, (e) => {
+        const p = e.features[0].properties;
+        this.map.getCanvas().style.cursor = 'pointer';
+        pop.setLngLat(JSON.parse(p.center)).setHTML(`<b>${p.name}</b><span>${p.bottles} bottle${p.bottles > 1 ? 's' : ''}</span>`).addTo(this.map);
+      });
+      this.map.on('mouseleave', id, () => {
+        this.map.getCanvas().style.cursor = '';
+        pop.remove();
+      });
     }
 
     // Any manual camera move pauses the tour.
@@ -247,6 +274,7 @@ export class Flyover {
     this.markers = [];
     const empty = { type: 'FeatureCollection', features: [] };
     this.map.getSource('outline').setData(place?.outline || empty);
+    this.map.getSource('rivers').setData(place?.riverLines || empty);
     this.stops = (place?.tour || []).map((s) => s.at);
     this.setActiveStop(-1);
     for (const [i, s] of (place?.tour || []).entries()) {

@@ -35,7 +35,7 @@ body.ex-open { overflow: hidden; }
     radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.45) 100%);
 }
 
-.ex-top { position: absolute; top: 0; left: 0; right: 0; display: flex; gap: 18px; align-items: flex-start; padding: 22px 26px; pointer-events: none; }
+.ex-top { position: absolute; top: 0; left: 0; right: 0; display: flex; gap: 18px; align-items: flex-start; padding: max(22px, env(safe-area-inset-top)) 26px 22px; pointer-events: none; }
 .ex-top > * { pointer-events: auto; }
 .ex-back, .ex-btn {
   display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 14px 0 10px; flex: none;
@@ -91,6 +91,11 @@ body.ex-open { overflow: hidden; }
 .maplibregl-ctrl-attrib { background: rgba(8,8,12,.5) !important; color: #8d8079; font-size: 10.5px; }
 .maplibregl-ctrl-attrib a { color: #b8a99f; }
 .maplibregl-ctrl-attrib-button { filter: invert(1); }
+
+.fx-pop .maplibregl-popup-content { padding: 8px 12px; border-radius: 10px; background: rgba(16,12,18,.92); color: var(--text); border: 1px solid rgba(255,226,160,.3); box-shadow: 0 10px 30px rgba(0,0,0,.5); display: grid; font-size: 12px; }
+.fx-pop .maplibregl-popup-content b { font: 600 16px var(--serif); }
+.fx-pop .maplibregl-popup-content span { color: var(--gold); }
+.fx-pop .maplibregl-popup-tip { border-top-color: rgba(16,12,18,.92) !important; border-bottom-color: rgba(16,12,18,.92) !important; }
 
 /* ---------- panel ---------- */
 .ex-panel {
@@ -225,7 +230,7 @@ body.ex-open { overflow: hidden; }
   .ex { display: block; overflow-y: auto; overscroll-behavior: contain; }
   .ex-map { height: 62svh; position: sticky; top: 0; z-index: 0; }
   .ex-panel { position: relative; z-index: 1; overflow: visible; border-left: 0; border-top: 1px solid rgba(255,255,255,.1); border-radius: 22px 22px 0 0; margin-top: -22px; padding: 26px 18px 60px; box-shadow: 0 -20px 50px rgba(0,0,0,.6); }
-  .ex-top { padding: 14px 16px; flex-direction: column; gap: 10px; }
+  .ex-top { padding: max(14px, env(safe-area-inset-top)) 16px 14px; flex-direction: column; gap: 10px; }
   .ex-blurb { display: none; }
   .ex-caption { left: 16px; right: 16px; bottom: 88px; max-width: none; padding: 10px 14px 12px; }
   .ex-caption h3 { font-size: 21px; }

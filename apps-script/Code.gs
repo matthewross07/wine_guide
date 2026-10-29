@@ -42,7 +42,9 @@ function doPost(e) {
 
     if (req.action === 'drink') {
       const locs = splitLocs_(row.values.locations);
-      const i = req.slot ? locs.indexOf(req.slot) : locs.length - 1;
+      // No slot = one of the unplaced bottles, unless every bottle has a slot.
+      const unplaced = Number(row.values.bottles || 0) > locs.length;
+      const i = req.slot ? locs.indexOf(req.slot) : unplaced ? -1 : locs.length - 1;
       if (i >= 0) locs.splice(i, 1);
       t.set(row, 'locations', locs.join('; '));
       t.set(row, 'bottles', Math.max(0, Number(row.values.bottles || 0) - 1));

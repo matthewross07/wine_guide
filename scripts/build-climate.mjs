@@ -13,6 +13,9 @@ import fs from 'node:fs';
 import { SEASON, seasonStart } from '../js/explore/climate.js';
 
 const API = 'https://archive-api.open-meteo.com/v1/archive';
+// ERA5-Land temperatures + ERA5 rain for every year. The default "best match"
+// switches to a different model from 2017, which shifts mountain sites by 2+ °C.
+const MODEL = 'era5_seamless';
 const DAY = 86400000;
 const only = process.argv.slice(2);
 const { places } = JSON.parse(fs.readFileSync('data/places.json', 'utf8'));
@@ -49,7 +52,7 @@ async function getSeason(lat, lon, year, south) {
   }
   spentThisMinute += weight;
   const url = `${API}?latitude=${lat}&longitude=${lon}&start_date=${iso(start)}&end_date=${iso(end)}` +
-    '&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT&cell_selection=land';
+    `&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=GMT&cell_selection=land&models=${MODEL}`;
   for (let attempt = 0; attempt < 8; attempt++) {
     const res = await fetch(url);
     if (res.status === 429) {
@@ -77,7 +80,7 @@ for (const p of places) {
   const { len } = south ? SEASON.south : SEASON.north;
   const file = `data/climate/${p.key}.json`;
   let doc = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : null;
-  if (!doc || doc.lat !== lat || doc.lon !== lon) doc = { key: p.key, name: p.name, lat, lon, south, elevation: null, seasons: {} };
+  if (!doc || doc.lat !== lat || doc.lon !== lon || doc.model !== MODEL) doc = { key: p.key, name: p.name, lat, lon, south, model: MODEL, elevation: null, seasons: {} };
 
   const lastYear = new Date(lastAvailable).getUTCFullYear() + (south ? 1 : 0);
   let fetched = 0;
