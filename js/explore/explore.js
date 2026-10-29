@@ -316,6 +316,8 @@ function renderPanel(state) {
       Weather: ERA5 reanalysis (ECMWF) via <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a>, for the grid cell at
       ${Math.abs(clim.lat).toFixed(2)}°${clim.lat >= 0 ? 'N' : 'S'} ${Math.abs(clim.lon).toFixed(2)}°${clim.lon >= 0 ? 'E' : 'W'}${clim.elevation != null ? ` (${Math.round(clim.elevation)} m)` : ''}.
       Season ${clim.south ? 'Oct–Apr' : 'Apr–Oct'}; normal = 1991–2020 median.
+      A reanalysis grid cell blends a few kilometres of terrain, so absolute values can be off for steep or
+      coastal vineyards — the comparisons between years are the reliable part.
       ${family ? `Vintage ratings are approximate consensus tiers from published vintage charts${great.length ? ` (great years: ${great.join(', ')})` : ''} — edit <code>data/vintages.json</code>.` : 'No vintage ratings for this region yet — add a family to <code>data/vintages.json</code>.'}
     </footer>`;
 
