@@ -1,0 +1,2496 @@
+{
+ "generated": "2026-10-29T03:35:03.473Z",
+ "places": [
+  {
+   "key": "saint-estephe",
+   "name": "Saint-Estèphe",
+   "match": "saint-est[eè]phe",
+   "blurb": "The northernmost of the Médoc's great communes: clay over gravel, firm and long-lived Cabernet blends.",
+   "tour": [
+    {
+     "name": "Margaux",
+     "note": "The southern start of the Médoc's famous communes.",
+     "at": [
+      -0.6729,
+      45.0463
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Saint-Julien",
+     "note": "Gravel ridges sloping toward the estuary.",
+     "at": [
+      -0.7414,
+      45.1649
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Pauillac",
+     "note": "Home to three of the five original first growths.",
+     "at": [
+      -0.7485,
+      45.1996
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Saint-Estèphe",
+     "note": "More clay in the soil: later-ripening, structured wines.",
+     "at": [
+      -0.7707,
+      45.2643
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/saint-estephe.geojson",
+   "bounds": [
+    -0.8162,
+    45.0463,
+    -0.6729,
+    45.284
+   ],
+   "center": [
+    -0.7445,
+    45.1651
+   ]
+  },
+  {
+   "key": "medoc",
+   "name": "Médoc",
+   "match": "m[eé]doc",
+   "blurb": "The Médoc AOC proper is the northern Bas-Médoc: flatter land, more clay, generous Merlot.",
+   "tour": [
+    {
+     "name": "Pauillac",
+     "note": "The heart of the Haut-Médoc.",
+     "at": [
+      -0.7485,
+      45.1996
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Saint-Estèphe",
+     "note": "The last of the famous communes.",
+     "at": [
+      -0.7707,
+      45.2643
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Saint-Yzans",
+     "note": "Into the Bas-Médoc, where the Médoc AOC begins.",
+     "at": [
+      -0.8216,
+      45.3226
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Bégadan",
+     "note": "The largest wine commune of the northern Médoc.",
+     "at": [
+      -0.8953,
+      45.3563
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/medoc.geojson",
+   "bounds": [
+    -0.9664,
+    45.1996,
+    -0.7485,
+    45.3901
+   ],
+   "center": [
+    -0.8574,
+    45.2948
+   ]
+  },
+  {
+   "key": "lalande-de-pomerol",
+   "name": "Lalande-de-Pomerol",
+   "match": "lalande",
+   "blurb": "Pomerol's northern neighbour across the Barbanne stream: Merlot-led, plush, good value.",
+   "tour": [
+    {
+     "name": "Libourne",
+     "note": "The Right Bank's river port on the Dordogne.",
+     "at": [
+      -0.2427,
+      44.9134
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Pomerol",
+     "note": "Clay and gravel plateau, home of Pétrus.",
+     "at": [
+      -0.2,
+      44.9311
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Néac",
+     "note": "Folded into the Lalande-de-Pomerol appellation.",
+     "at": [
+      -0.1838,
+      44.9353
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Lalande-de-Pomerol",
+     "note": "Gravel and sand north of the Barbanne.",
+     "at": [
+      -0.2104,
+      44.9561
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/lalande-de-pomerol.geojson",
+   "bounds": [
+    -0.2427,
+    44.9134,
+    -0.1511,
+    44.9694
+   ],
+   "center": [
+    -0.1969,
+    44.9414
+   ]
+  },
+  {
+   "key": "castillon",
+   "name": "Castillon-Côtes de Bordeaux",
+   "match": "castillon",
+   "blurb": "Saint-Émilion's limestone plateau continues east into Castillon: the same soils at a fraction of the price.",
+   "tour": [
+    {
+     "name": "Saint-Émilion",
+     "note": "The limestone plateau Castillon shares.",
+     "at": [
+      -0.1561,
+      44.8931
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Saint-Genès-de-Castillon",
+     "note": "Hilltop vineyards on the plateau's eastern edge.",
+     "at": [
+      -0.0621,
+      44.8981
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Saint-Magne-de-Castillon",
+     "note": "Slopes running down to the Dordogne.",
+     "at": [
+      -0.0686,
+      44.864
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Castillon-la-Bataille",
+     "note": "Where the Hundred Years' War ended in 1453.",
+     "at": [
+      -0.0451,
+      44.8533
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/castillon.geojson",
+   "bounds": [
+    -0.1561,
+    44.8335,
+    0.0343,
+    44.9288
+   ],
+   "center": [
+    -0.0609,
+    44.8812
+   ]
+  },
+  {
+   "key": "cotes-de-bourg",
+   "name": "Côtes de Bourg",
+   "match": "bourg",
+   "blurb": "Steep limestone slopes facing the Médoc across the Gironde: Merlot and Malbec with backbone.",
+   "tour": [
+    {
+     "name": "Bec d'Ambès",
+     "note": "Where the Garonne and Dordogne meet to form the Gironde.",
+     "at": [
+      -0.5292,
+      45.0122
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Bourg",
+     "note": "The old river town on its limestone bluff.",
+     "at": [
+      -0.5596,
+      45.0395
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Blaye",
+     "note": "Vauban's citadel guarding the estuary.",
+     "at": [
+      -0.6636,
+      45.1271
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/cotes-de-bourg.geojson",
+   "bounds": [
+    -0.6636,
+    45.0122,
+    -0.5064,
+    45.1271
+   ],
+   "center": [
+    -0.585,
+    45.0696
+   ]
+  },
+  {
+   "key": "bordeaux",
+   "name": "Bordeaux",
+   "match": "bordeaux",
+   "blurb": "Two rivers, two banks: Cabernet on the Left Bank's gravel, Merlot on the Right Bank's clay and limestone.",
+   "tour": [
+    {
+     "name": "Bordeaux",
+     "note": "The port city on a crescent of the Garonne.",
+     "at": [
+      -0.58,
+      44.8412
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Entre-Deux-Mers",
+     "note": "Between the two rivers: the source of much Bordeaux and Bordeaux Supérieur.",
+     "at": [
+      -0.3483,
+      44.7747
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Saint-Émilion",
+     "note": "The Right Bank's limestone heart.",
+     "at": [
+      -0.1561,
+      44.8931
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Bourg",
+     "note": "Across the estuary from the Médoc.",
+     "at": [
+      -0.5596,
+      45.0395
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Pauillac",
+     "note": "The Left Bank's gravel and the great Cabernet estates.",
+     "at": [
+      -0.7485,
+      45.1996
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/bordeaux.geojson",
+   "bounds": [
+    -1.265,
+    44.1939,
+    0.3146,
+    45.6019
+   ],
+   "center": [
+    -0.4752,
+    44.8979
+   ]
+  },
+  {
+   "key": "chateauneuf-du-pape",
+   "name": "Châteauneuf-du-Pape",
+   "match": "ch[aâ]teauneuf",
+   "blurb": "Grenache-led blends grown among the galets roulés, river stones that soak up the Provençal sun.",
+   "tour": [
+    {
+     "name": "Avignon",
+     "note": "Where the popes lived in the 14th century.",
+     "at": [
+      4.8059,
+      43.9492
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Sorgues",
+     "note": "The southern edge of the appellation.",
+     "at": [
+      4.8725,
+      44.0066
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Châteauneuf-du-Pape",
+     "note": "The ruined papal summer castle above the village.",
+     "at": [
+      4.8317,
+      44.056
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Courthézon",
+     "note": "Sandier soils in the northeast of the appellation.",
+     "at": [
+      4.8835,
+      44.0867
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Orange",
+     "note": "The Roman city just to the north.",
+     "at": [
+      4.8079,
+      44.1371
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/chateauneuf-du-pape.geojson",
+   "bounds": [
+    4.7873,
+    43.9492,
+    4.9436,
+    44.1371
+   ],
+   "center": [
+    4.8655,
+    44.0432
+   ]
+  },
+  {
+   "key": "seyssuel",
+   "name": "Seyssuel · Northern Rhône",
+   "match": "seyssuel|northern rh[oô]ne",
+   "blurb": "Steep schist terraces just north of Vienne, revived in the 1990s: Syrah in the style of nearby Côte-Rôtie.",
+   "tour": [
+    {
+     "name": "Seyssuel",
+     "note": "Schist terraces on the Rhône's left bank.",
+     "at": [
+      4.8442,
+      45.5596
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Vienne",
+     "note": "Roman city, and Seyssuel's neighbour.",
+     "at": [
+      4.8748,
+      45.5252
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Ampuis",
+     "note": "Côte-Rôtie's 'roasted slope' across the river.",
+     "at": [
+      4.8112,
+      45.4889
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Condrieu",
+     "note": "Viognier's home ground.",
+     "at": [
+      4.7676,
+      45.4624
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/seyssuel.geojson",
+   "bounds": [
+    4.7676,
+    45.4624,
+    4.8748,
+    45.5806
+   ],
+   "center": [
+    4.8212,
+    45.5215
+   ]
+  },
+  {
+   "key": "morgon",
+   "name": "Morgon",
+   "match": "morgon",
+   "blurb": "The Beaujolais cru with the most structure, especially from the decomposed blue rock of the Côte du Py.",
+   "tour": [
+    {
+     "name": "Juliénas",
+     "note": "The northern crus.",
+     "at": [
+      4.7115,
+      46.2347
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Fleurie",
+     "note": "Pink granite and perfumed Gamay.",
+     "at": [
+      4.6981,
+      46.192
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Villié-Morgon",
+     "note": "The village at the centre of Morgon.",
+     "at": [
+      4.6813,
+      46.1612
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Côte du Py",
+     "note": "An old volcanic hill: Morgon's most famous slope.",
+     "at": [
+      4.6386,
+      46.1683
+     ],
+     "src": "hand"
+    }
+   ],
+   "outline": "data/outlines/morgon.geojson",
+   "bounds": [
+    4.6192,
+    46.1328,
+    4.7115,
+    46.2347
+   ],
+   "center": [
+    4.6654,
+    46.1838
+   ]
+  },
+  {
+   "key": "julienas",
+   "name": "Juliénas",
+   "match": "juli[eé]nas",
+   "blurb": "A northern Beaujolais cru on granite and schist: bright, spicy Gamay.",
+   "tour": [
+    {
+     "name": "Saint-Amour",
+     "note": "The northernmost cru, on the Burgundy border.",
+     "at": [
+      4.743,
+      46.2453
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Juliénas",
+     "note": "Named, they say, after Julius Caesar.",
+     "at": [
+      4.7115,
+      46.2347
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Jullié",
+     "note": "Higher, steeper vineyards to the west.",
+     "at": [
+      4.6782,
+      46.242
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Chénas",
+     "note": "The smallest cru, to the south.",
+     "at": [
+      4.719,
+      46.2119
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/julienas.geojson",
+   "bounds": [
+    4.6303,
+    46.2119,
+    4.743,
+    46.2679
+   ],
+   "center": [
+    4.6867,
+    46.2399
+   ]
+  },
+  {
+   "key": "chouilly",
+   "name": "Chouilly · Côte des Blancs",
+   "match": "chouilly|c[oô]te des blancs",
+   "blurb": "Chalk slopes south of Épernay planted almost entirely to Chardonnay: the source of the finest Blanc de Blancs.",
+   "tour": [
+    {
+     "name": "Épernay",
+     "note": "The Avenue de Champagne and its miles of chalk cellars.",
+     "at": [
+      3.9529,
+      49.0426
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Chouilly",
+     "note": "Grand cru village at the north end of the Côte des Blancs.",
+     "at": [
+      4.0095,
+      49.0261
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Cramant",
+     "note": "Grand cru on a spur of pure chalk.",
+     "at": [
+      3.9921,
+      48.9877
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Avize",
+     "note": "Grand cru, home of the region's wine school.",
+     "at": [
+      4.0101,
+      48.9722
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Le Mesnil-sur-Oger",
+     "note": "Grand cru famous for taut, long-lived Chardonnay.",
+     "at": [
+      4.0212,
+      48.9463
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/chouilly.geojson",
+   "bounds": [
+    3.9529,
+    48.926,
+    4.0756,
+    49.0426
+   ],
+   "center": [
+    4.0143,
+    48.9843
+   ]
+  },
+  {
+   "key": "cote-des-bar",
+   "name": "Côte des Bar",
+   "match": "c[oô]te des bar",
+   "blurb": "Champagne's southern outpost in the Aube, on Kimmeridgian marl like Chablis: Pinot Noir country.",
+   "tour": [
+    {
+     "name": "Bar-sur-Seine",
+     "note": "Gateway to the Seine valley vineyards.",
+     "at": [
+      4.3759,
+      48.1127
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Celles-sur-Ource",
+     "note": "A village of grower Champagne houses.",
+     "at": [
+      4.4006,
+      48.0765
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Les Riceys",
+     "note": "Champagne's largest wine commune, with its own rosé AOC.",
+     "at": [
+      4.3658,
+      47.9945
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/cote-des-bar.geojson",
+   "bounds": [
+    4.3113,
+    47.9558,
+    4.4492,
+    48.1492
+   ],
+   "center": [
+    4.3803,
+    48.0525
+   ]
+  },
+  {
+   "key": "alsace",
+   "name": "Alsace",
+   "match": "alsace",
+   "blurb": "In the Vosges rain shadow, one of France's driest regions: aromatic whites from a mosaic of soils.",
+   "tour": [
+    {
+     "name": "Riquewihr",
+     "note": "A walled medieval village surrounded by grand cru slopes.",
+     "at": [
+      7.298,
+      48.1661
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Sigolsheim",
+     "note": "Below the Mambourg grand cru.",
+     "at": [
+      7.314,
+      48.1343
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Kaysersberg",
+     "note": "The castle at the mouth of the Weiss valley.",
+     "at": [
+      7.2411,
+      48.1572
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Turckheim",
+     "note": "The Brand grand cru's granite slopes.",
+     "at": [
+      7.278,
+      48.0878
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Eguisheim",
+     "note": "Concentric streets around a castle.",
+     "at": [
+      7.308,
+      48.0448
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/alsace.geojson",
+   "bounds": [
+    7.2014,
+    48.0448,
+    7.3499,
+    48.1889
+   ],
+   "center": [
+    7.2757,
+    48.1169
+   ]
+  },
+  {
+   "key": "loire",
+   "name": "Loire Valley",
+   "match": "loire",
+   "blurb": "France's longest river, with Sauvignon Blanc at its eastern end: flint and chalk around Sancerre.",
+   "tour": [
+    {
+     "name": "Sancerre",
+     "note": "Hilltop town above the Loire.",
+     "at": [
+      2.839,
+      47.3307
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Pouilly-sur-Loire",
+     "note": "Pouilly-Fumé, across the river.",
+     "at": [
+      2.9584,
+      47.2814
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Menetou-Salon",
+     "note": "Sancerre's quieter neighbour.",
+     "at": [
+      2.4886,
+      47.2315
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    2.4886,
+    47.2315,
+    2.9584,
+    47.3307
+   ],
+   "center": [
+    2.7235,
+    47.2811
+   ]
+  },
+  {
+   "key": "burgundy",
+   "name": "Burgundy",
+   "match": "burgund|bourgogne",
+   "blurb": "The Côte d'Or's narrow east-facing escarpment, with blackcurrant country (cassis) in the Hautes-Côtes behind it.",
+   "tour": [
+    {
+     "name": "Dijon",
+     "note": "The capital, and the birthplace of crème de cassis.",
+     "at": [
+      5.0415,
+      47.3216
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Gevrey-Chambertin",
+     "note": "Grand cru Pinot Noir on the Côte de Nuits.",
+     "at": [
+      4.9706,
+      47.2262
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Nuits-Saint-Georges",
+     "note": "The town that gives the Côte de Nuits its name.",
+     "at": [
+      4.949,
+      47.1367
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Villers-la-Faye",
+     "note": "Hautes-Côtes village, home to cassis growers.",
+     "at": [
+      4.8778,
+      47.1055
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Beaune",
+     "note": "The Hospices and the Côte de Beaune.",
+     "at": [
+      4.838,
+      47.0239
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    4.838,
+    47.0239,
+    5.0415,
+    47.3216
+   ],
+   "center": [
+    4.9398,
+    47.1727
+   ]
+  },
+  {
+   "key": "barolo",
+   "name": "Barolo",
+   "match": "barolo|la morra",
+   "blurb": "Nebbiolo in the Langhe hills south of Alba: perfumed on the western sands, powerful on the eastern marls.",
+   "tour": [
+    {
+     "name": "Alba",
+     "note": "The truffle town on the Tanaro river.",
+     "at": [
+      8.0311,
+      44.6866
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "La Morra",
+     "note": "The highest village, known for perfumed, elegant Barolo.",
+     "at": [
+      7.9361,
+      44.652
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Barolo",
+     "note": "The village and castle that gave the wine its name.",
+     "at": [
+      7.9394,
+      44.6147
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Castiglione Falletto",
+     "note": "A central ridge between the two soil types.",
+     "at": [
+      7.9737,
+      44.6326
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Monforte d'Alba",
+     "note": "Firm, deep wines from crus like Bussia and Ginestra.",
+     "at": [
+      7.9739,
+      44.5904
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Serralunga d'Alba",
+     "note": "The most structured, long-lived Barolo.",
+     "at": [
+      7.9974,
+      44.618
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/barolo.geojson",
+   "bounds": [
+    7.8951,
+    44.5573,
+    8.0311,
+    44.6866
+   ],
+   "center": [
+    7.9631,
+    44.622
+   ]
+  },
+  {
+   "key": "barbaresco",
+   "name": "Barbaresco",
+   "match": "barbaresco",
+   "blurb": "Barolo's neighbour across Alba: lower, warmer and closer to the Tanaro, so the Nebbiolo ripens earlier and is more approachable.",
+   "tour": [
+    {
+     "name": "Alba",
+     "note": "Gateway to the Langhe.",
+     "at": [
+      8.0311,
+      44.6866
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Barbaresco",
+     "note": "The village tower above the Tanaro.",
+     "at": [
+      8.0769,
+      44.7193
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Neive",
+     "note": "A hilltop borgo with the Albesani and Gallina crus.",
+     "at": [
+      8.1152,
+      44.7261
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Treiso",
+     "note": "The highest, freshest corner of the zone.",
+     "at": [
+      8.0872,
+      44.684
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/barbaresco.geojson",
+   "bounds": [
+    8.0311,
+    44.6581,
+    8.1523,
+    44.757
+   ],
+   "center": [
+    8.0917,
+    44.7076
+   ]
+  },
+  {
+   "key": "roero",
+   "name": "Roero",
+   "match": "roero",
+   "blurb": "Sandy hills north of the Tanaro, cut by dramatic gullies (the rocche): Arneis's homeland.",
+   "tour": [
+    {
+     "name": "Alba",
+     "note": "Crossing the Tanaro to the north.",
+     "at": [
+      8.0311,
+      44.6866
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Vezza d'Alba",
+     "note": "Sandy slopes and the Rocche.",
+     "at": [
+      7.9974,
+      44.7659
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Canale",
+     "note": "The Roero's main wine town.",
+     "at": [
+      8.01,
+      44.8021
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Montà",
+     "note": "Wooded ridges in the north of the Roero.",
+     "at": [
+      7.9469,
+      44.8251
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/roero.geojson",
+   "bounds": [
+    7.9024,
+    44.6866,
+    8.0456,
+    44.8566
+   ],
+   "center": [
+    7.974,
+    44.7716
+   ]
+  },
+  {
+   "key": "montalcino",
+   "name": "Montalcino",
+   "match": "montalcino|brunello",
+   "blurb": "A single hilltop commune that is the whole Brunello zone: warm, dry, and shielded by Monte Amiata.",
+   "tour": [
+    {
+     "name": "Torrenieri",
+     "note": "Gentler northern slopes along the Via Francigena.",
+     "at": [
+      11.5486,
+      43.0857
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Montalcino",
+     "note": "The walled hill town and its 14th-century fortress.",
+     "at": [
+      11.4903,
+      43.0576
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Castelnuovo dell'Abate",
+     "note": "Home to the Romanesque abbey of Sant'Antimo.",
+     "at": [
+      11.5165,
+      42.9952
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Sant'Angelo in Colle",
+     "note": "The warm southern slopes facing Monte Amiata.",
+     "at": [
+      11.4605,
+      42.994
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/montalcino.geojson",
+   "bounds": [
+    11.3498,
+    42.9573,
+    11.687,
+    43.1775
+   ],
+   "center": [
+    11.5184,
+    43.0674
+   ]
+  },
+  {
+   "key": "chianti-classico",
+   "name": "Chianti Classico",
+   "match": "chianti",
+   "blurb": "The Sangiovese heartland between Florence and Siena: galestro and alberese soils, oak woods and high hills.",
+   "tour": [
+    {
+     "name": "Greve in Chianti",
+     "note": "The market town of the northern Chianti Classico.",
+     "at": [
+      11.332,
+      43.6069
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Panzano",
+     "note": "The Conca d'Oro, a 'golden bowl' of vineyards.",
+     "at": [
+      11.3159,
+      43.5449
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Castellina in Chianti",
+     "note": "Etruscan tombs and western-facing slopes.",
+     "at": [
+      11.2873,
+      43.4692
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Radda in Chianti",
+     "note": "High and cool, with nervy Sangiovese.",
+     "at": [
+      11.3747,
+      43.4871
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Gaiole in Chianti",
+     "note": "Castles at Brolio and Meleto.",
+     "at": [
+      11.4342,
+      43.4683
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/chianti-classico.geojson",
+   "bounds": [
+    11.2053,
+    43.3553,
+    11.5517,
+    43.6957
+   ],
+   "center": [
+    11.3785,
+    43.5255
+   ]
+  },
+  {
+   "key": "valdarno",
+   "name": "Valdarno di Sopra",
+   "match": "val d'arno|valdarno",
+   "blurb": "The upper Arno valley between the Chianti hills and the Pratomagno: one of Tuscany's oldest delimited wine areas (1716).",
+   "tour": [
+    {
+     "name": "Montevarchi",
+     "note": "The valley town on the Arno.",
+     "at": [
+      11.5676,
+      43.5235
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Mercatale Valdarno",
+     "note": "Hills on the eastern flank of Chianti.",
+     "at": [
+      11.5635,
+      43.4789
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Bucine",
+     "note": "Woods and vineyards above the Ambra stream.",
+     "at": [
+      11.617,
+      43.4792
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/valdarno.geojson",
+   "bounds": [
+    11.5293,
+    43.3476,
+    11.6797,
+    43.5235
+   ],
+   "center": [
+    11.6045,
+    43.4356
+   ]
+  },
+  {
+   "key": "vulture",
+   "name": "Vulture",
+   "match": "vulture|basilicata",
+   "blurb": "Volcanic slopes of the extinct Monte Vulture in Basilicata: ash and tuff soils, cool nights, Aglianico country.",
+   "tour": [
+    {
+     "name": "Melfi",
+     "note": "The Norman castle town.",
+     "at": [
+      15.6557,
+      40.9961
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Monte Vulture",
+     "note": "The extinct volcano at the centre of the region.",
+     "at": [
+      15.6363,
+      40.9507
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Rionero in Vulture",
+     "note": "Cellars dug into volcanic tuff.",
+     "at": [
+      15.6694,
+      40.9262
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Barile",
+     "note": "A village of cave cellars, the 'Sheshë'.",
+     "at": [
+      15.6727,
+      40.9463
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    15.6363,
+    40.9262,
+    15.6727,
+    40.9961
+   ],
+   "center": [
+    15.6545,
+    40.9612
+   ]
+  },
+  {
+   "key": "morro-d-alba",
+   "name": "Morro d'Alba",
+   "match": "marche|morro d'alba|lacrima",
+   "blurb": "Rolling hills a few kilometres from the Adriatic: home of the rare, rose-scented Lacrima grape.",
+   "tour": [
+    {
+     "name": "Senigallia",
+     "note": "The coast, a few kilometres away.",
+     "at": [
+      13.2106,
+      43.6774
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Morro d'Alba",
+     "note": "The walled village and its covered walkway.",
+     "at": [
+      13.2182,
+      43.6106
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Ancona",
+     "note": "The Marche's port and capital.",
+     "at": [
+      13.5189,
+      43.6158
+     ],
+     "src": "hand"
+    }
+   ],
+   "outline": "data/outlines/morro-d-alba.geojson",
+   "bounds": [
+    13.1884,
+    43.5842,
+    13.5189,
+    43.6774
+   ],
+   "center": [
+    13.3537,
+    43.6308
+   ]
+  },
+  {
+   "key": "lambrusco-mantovano",
+   "name": "Lambrusco Mantovano",
+   "match": "lombard|mantovan|lambrusco",
+   "blurb": "Flat, fertile plain along the Po south of Mantua: Lambrusco's Lombard corner.",
+   "tour": [
+    {
+     "name": "Mantua",
+     "note": "The Gonzaga city, ringed by lakes.",
+     "at": [
+      10.7914,
+      45.1564
+     ],
+     "src": "hand"
+    },
+    {
+     "name": "Suzzara",
+     "note": "Across the Po into the Oltrepò Mantovano.",
+     "at": [
+      10.7432,
+      44.992
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Quistello",
+     "note": "Lambrusco vineyards along the Secchia.",
+     "at": [
+      10.9805,
+      45.0066
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    10.7432,
+    44.992,
+    10.9805,
+    45.1564
+   ],
+   "center": [
+    10.8619,
+    45.0742
+   ]
+  },
+  {
+   "key": "rioja-alta",
+   "name": "Rioja Alta",
+   "match": "rioja",
+   "blurb": "The cooler, higher western Rioja along the Ebro: the home of long-aged traditional Tempranillo.",
+   "tour": [
+    {
+     "name": "Haro",
+     "note": "The Barrio de la Estación, where López de Heredia has worked since 1877.",
+     "at": [
+      -2.8467,
+      42.5769
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Briones",
+     "note": "Hilltop village above the Ebro.",
+     "at": [
+      -2.7951,
+      42.5205
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "San Vicente de la Sonsierra",
+     "note": "Castle and vineyards on the north bank.",
+     "at": [
+      -2.7587,
+      42.5624
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Logroño",
+     "note": "The capital, on the Ebro.",
+     "at": [
+      -2.4397,
+      42.4661
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/rioja-alta.geojson",
+   "bounds": [
+    -2.9129,
+    42.4661,
+    -2.4397,
+    42.6384
+   ],
+   "center": [
+    -2.6763,
+    42.5523
+   ]
+  },
+  {
+   "key": "ribera-del-duero",
+   "name": "Ribera del Duero",
+   "match": "ribera",
+   "blurb": "A high plateau (750–900 m) along the Duero: scorching days, frosty nights, concentrated Tempranillo.",
+   "tour": [
+    {
+     "name": "Aranda de Duero",
+     "note": "Medieval wine cellars beneath the town.",
+     "at": [
+      -3.6851,
+      41.6715
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Roa",
+     "note": "Seat of the appellation's regulatory council.",
+     "at": [
+      -3.9284,
+      41.6966
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Peñafiel",
+     "note": "The ship-shaped castle, now a wine museum.",
+     "at": [
+      -4.1216,
+      41.5966
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Pesquera de Duero",
+     "note": "Where the modern Ribera revival began.",
+     "at": [
+      -4.1559,
+      41.6416
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    -4.1559,
+    41.5966,
+    -3.6851,
+    41.6966
+   ],
+   "center": [
+    -3.9205,
+    41.6466
+   ]
+  },
+  {
+   "key": "rueda",
+   "name": "Rueda",
+   "match": "rueda",
+   "blurb": "Stony, high plateau south of the Duero: crisp Verdejo.",
+   "tour": [
+    {
+     "name": "Tordesillas",
+     "note": "On the Duero, where the 1494 treaty was signed.",
+     "at": [
+      -5.0005,
+      41.5009
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Rueda",
+     "note": "The village at the heart of Verdejo country.",
+     "at": [
+      -4.9598,
+      41.413
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "La Seca",
+     "note": "The largest vineyard village.",
+     "at": [
+      -4.9071,
+      41.4144
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    -5.0005,
+    41.413,
+    -4.9071,
+    41.5009
+   ],
+   "center": [
+    -4.9538,
+    41.457
+   ]
+  },
+  {
+   "key": "utiel-requena",
+   "name": "Utiel-Requena",
+   "match": "utiel|requena",
+   "blurb": "Inland Valencia on a 700–900 m plateau: Bobal country, cool enough for bright rosado.",
+   "tour": [
+    {
+     "name": "Requena",
+     "note": "A medieval quarter above old underground cellars.",
+     "at": [
+      -1.1002,
+      39.4881
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Utiel",
+     "note": "The other half of the name.",
+     "at": [
+      -1.2052,
+      39.5681
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Camporrobles",
+     "note": "The high Sierra Norte, near 900 m.",
+     "at": [
+      -1.4009,
+      39.6472
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    -1.4009,
+    39.4881,
+    -1.1002,
+    39.6472
+   ],
+   "center": [
+    -1.2505,
+    39.5677
+   ]
+  },
+  {
+   "key": "dao-serra-da-estrela",
+   "name": "Dão · Serra da Estrela",
+   "match": "serra da estrela",
+   "blurb": "Granite foothills of Portugal's highest mountains: high-altitude Dão with bright acidity.",
+   "tour": [
+    {
+     "name": "Viseu",
+     "note": "The Dão's capital.",
+     "at": [
+      -7.9139,
+      40.6575
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Nelas",
+     "note": "In the centre of the region.",
+     "at": [
+      -7.8551,
+      40.53
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Seia",
+     "note": "Vineyards at the foot of the Serra da Estrela.",
+     "at": [
+      -7.7028,
+      40.4201
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Torre",
+     "note": "Mainland Portugal's highest point, 1,993 m.",
+     "at": [
+      -7.6131,
+      40.3217
+     ],
+     "src": "hand"
+    }
+   ],
+   "bounds": [
+    -7.9139,
+    40.3217,
+    -7.6131,
+    40.6575
+   ],
+   "center": [
+    -7.7635,
+    40.4896
+   ]
+  },
+  {
+   "key": "dao",
+   "name": "Dão",
+   "match": "d[aã]o",
+   "blurb": "A granite plateau ringed by mountains, sheltered from both Atlantic rain and Spanish heat: Encruzado and Touriga Nacional.",
+   "tour": [
+    {
+     "name": "Viseu",
+     "note": "The Dão's capital.",
+     "at": [
+      -7.9139,
+      40.6575
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Silgueiros",
+     "note": "Pine woods and granite south of Viseu.",
+     "at": [
+      -7.9554,
+      40.5704
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Nelas",
+     "note": "In the centre of the region.",
+     "at": [
+      -7.8551,
+      40.53
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Mangualde",
+     "note": "The eastern Dão, toward the Serra da Estrela.",
+     "at": [
+      -7.7656,
+      40.6035
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    -7.9554,
+    40.53,
+    -7.7656,
+    40.6575
+   ],
+   "center": [
+    -7.8605,
+    40.5938
+   ]
+  },
+  {
+   "key": "moncao-melgaco",
+   "name": "Monção e Melgaço",
+   "match": "mon[cç][aã]o|melga[cç]o",
+   "blurb": "Alvarinho's home on the Minho river, sheltered by hills from the Atlantic: richer and riper than other Vinho Verde.",
+   "tour": [
+    {
+     "name": "Valença",
+     "note": "A fortress facing Spain across the Minho.",
+     "at": [
+      -8.6064,
+      41.9917
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Monção",
+     "note": "Alvarinho's spiritual home.",
+     "at": [
+      -8.4173,
+      42.0279
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Melgaço",
+     "note": "Upriver, Portugal's northernmost town.",
+     "at": [
+      -8.1966,
+      42.0392
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    -8.6064,
+    41.9917,
+    -8.1966,
+    42.0392
+   ],
+   "center": [
+    -8.4015,
+    42.0155
+   ]
+  },
+  {
+   "key": "sousa",
+   "name": "Vinho Verde · Sousa",
+   "match": "sousa",
+   "blurb": "The Sousa valley east of Porto: warmer, inland Vinho Verde.",
+   "tour": [
+    {
+     "name": "Paredes",
+     "note": "The southern Sousa valley.",
+     "at": [
+      -8.3332,
+      41.2079
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Penafiel",
+     "note": "On the hills above the Sousa river.",
+     "at": [
+      -8.2856,
+      41.2062
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Lousada",
+     "note": "Vineyards trained high on pergolas.",
+     "at": [
+      -8.2826,
+      41.2774
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Felgueiras",
+     "note": "The northern end of the subregion.",
+     "at": [
+      -8.1989,
+      41.3649
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    -8.3332,
+    41.2062,
+    -8.1989,
+    41.3649
+   ],
+   "center": [
+    -8.266,
+    41.2856
+   ]
+  },
+  {
+   "key": "vinho-verde",
+   "name": "Vinho Verde · Minho",
+   "match": "vinho verde|minho",
+   "blurb": "Green, rainy northwest Portugal, where Atlantic air keeps the whites low in alcohol and bright.",
+   "tour": [
+    {
+     "name": "Viana do Castelo",
+     "note": "Where the Lima river meets the Atlantic.",
+     "at": [
+      -8.7637,
+      41.7181
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Ponte de Lima",
+     "note": "Portugal's oldest town, with Loureiro vines.",
+     "at": [
+      -8.5735,
+      41.7468
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Braga",
+     "note": "The Minho's old capital.",
+     "at": [
+      -8.428,
+      41.5511
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Barcelos",
+     "note": "On the Cávado river.",
+     "at": [
+      -8.6192,
+      41.5314
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    -8.7637,
+    41.5314,
+    -8.428,
+    41.7468
+   ],
+   "center": [
+    -8.5958,
+    41.6391
+   ]
+  },
+  {
+   "key": "lisboa",
+   "name": "Lisboa",
+   "match": "lisboa|lisbon",
+   "blurb": "Atlantic-cooled hills north of Lisbon: fresh whites and easy reds.",
+   "tour": [
+    {
+     "name": "Torres Vedras",
+     "note": "Part of Wellington's defensive lines.",
+     "at": [
+      -9.2607,
+      39.0931
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Bombarral",
+     "note": "Quinta do Sanguinhal's home.",
+     "at": [
+      -9.1584,
+      39.2671
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Óbidos",
+     "note": "A walled medieval town near the Atlantic lagoon.",
+     "at": [
+      -9.1572,
+      39.362
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    -9.2607,
+    39.0931,
+    -9.1572,
+    39.362
+   ],
+   "center": [
+    -9.2089,
+    39.2276
+   ]
+  },
+  {
+   "key": "alexander-valley",
+   "name": "Alexander Valley",
+   "match": "alexander valley",
+   "blurb": "The warm upper Russian River valley in northern Sonoma: ripe Cabernet, and Chardonnay on the cooler benches.",
+   "tour": [
+    {
+     "name": "Healdsburg",
+     "note": "The town where three Sonoma valleys meet.",
+     "at": [
+      -122.8701,
+      38.6107
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Jimtown",
+     "note": "The valley floor along the Russian River.",
+     "at": [
+      -122.8197,
+      38.6666
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Geyserville",
+     "note": "The upper valley, below the Mayacamas.",
+     "at": [
+      -122.901,
+      38.7129
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Cloverdale",
+     "note": "The northern end of the AVA.",
+     "at": [
+      -123.0179,
+      38.8065
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/alexander-valley.geojson",
+   "bounds": [
+    -123.0812,
+    38.6038,
+    -122.7424,
+    38.8528
+   ],
+   "center": [
+    -122.9118,
+    38.7283
+   ]
+  },
+  {
+   "key": "chalk-hill",
+   "name": "Chalk Hill",
+   "match": "chalk hill",
+   "blurb": "Not chalk at all but white volcanic ash: a warm, hilly corner of the Russian River Valley.",
+   "tour": [
+    {
+     "name": "Windsor",
+     "note": "The southern edge of Chalk Hill.",
+     "at": [
+      -122.8164,
+      38.5471
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Chalk Hill",
+     "note": "Rolling hills of volcanic ash.",
+     "at": [
+      -122.766,
+      38.59
+     ],
+     "src": "hand"
+    },
+    {
+     "name": "Healdsburg",
+     "note": "Just to the northwest.",
+     "at": [
+      -122.8701,
+      38.6107
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/chalk-hill.geojson",
+   "bounds": [
+    -122.8701,
+    38.508,
+    -122.6739,
+    38.6149
+   ],
+   "center": [
+    -122.772,
+    38.5615
+   ]
+  },
+  {
+   "key": "napa-valley",
+   "name": "Napa Valley",
+   "match": "napa",
+   "blurb": "Thirty miles of benchland between the Mayacamas and Vaca ranges, with San Pablo Bay fog cooling the south.",
+   "tour": [
+    {
+     "name": "Napa",
+     "note": "The cooler south end, near the bay.",
+     "at": [
+      -122.2869,
+      38.2975
+     ],
+     "src": "hand"
+    },
+    {
+     "name": "Yountville",
+     "note": "The valley narrows here.",
+     "at": [
+      -122.3595,
+      38.4022
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Oakville",
+     "note": "The Rutherford Bench and To Kalon.",
+     "at": [
+      -122.4071,
+      38.4389
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "St. Helena",
+     "note": "The historic heart of Napa winemaking.",
+     "at": [
+      -122.47,
+      38.5052
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Pope Valley",
+     "note": "A hidden valley east over the Vaca range.",
+     "at": [
+      -122.4278,
+      38.6152
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Calistoga",
+     "note": "The hot north end, below Mount St. Helena.",
+     "at": [
+      -122.5797,
+      38.5788
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/napa-valley.geojson",
+   "bounds": [
+    -122.6468,
+    38.1551,
+    -122.0614,
+    38.7683
+   ],
+   "center": [
+    -122.3541,
+    38.4617
+   ]
+  },
+  {
+   "key": "paso-robles",
+   "name": "Paso Robles",
+   "match": "paso robles|central coast",
+   "blurb": "Hot days and cold Pacific nights, with the widest daily temperature swing in California: Rhône and Bordeaux varieties.",
+   "tour": [
+    {
+     "name": "Templeton",
+     "note": "The Templeton Gap funnels in ocean air.",
+     "at": [
+      -120.7008,
+      35.5605
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Paso Robles",
+     "note": "The town on the Salinas river.",
+     "at": [
+      -120.6901,
+      35.6263
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Adelaida",
+     "note": "Limestone hills on the west side.",
+     "at": [
+      -120.8735,
+      35.6455
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/paso-robles.geojson",
+   "bounds": [
+    -120.8735,
+    35.3526,
+    -120.1952,
+    35.7912
+   ],
+   "center": [
+    -120.5343,
+    35.5719
+   ]
+  },
+  {
+   "key": "lime-kiln-valley",
+   "name": "Lime Kiln Valley",
+   "match": "lime kiln|san benito",
+   "blurb": "A tiny AVA in the Gabilan range, on limestone and granite: old-vine Mourvèdre planted in the 1880s.",
+   "tour": [
+    {
+     "name": "Hollister",
+     "note": "The San Benito valley.",
+     "at": [
+      -121.4016,
+      36.8525
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Cienega Valley",
+     "note": "Along the San Andreas Fault, home of Calera.",
+     "at": [
+      -121.4024,
+      36.8159
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Lime Kiln Valley",
+     "note": "Old kilns and old vines.",
+     "at": [
+      -121.383,
+      36.71
+     ],
+     "src": "hand"
+    }
+   ],
+   "outline": "data/outlines/lime-kiln-valley.geojson",
+   "bounds": [
+    -121.4024,
+    36.6764,
+    -121.3201,
+    36.8525
+   ],
+   "center": [
+    -121.3612,
+    36.7644
+   ]
+  },
+  {
+   "key": "red-mountain",
+   "name": "Red Mountain",
+   "match": "red mountain",
+   "blurb": "Washington's smallest, hottest AVA: a southwest-facing slope above the Yakima river making powerful Cabernet.",
+   "tour": [
+    {
+     "name": "Benton City",
+     "note": "On the Yakima river at the foot of the slope.",
+     "at": [
+      -119.4878,
+      46.2632
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Red Mountain",
+     "note": "Sagebrush and vineyards on wind-blown loess.",
+     "at": [
+      -119.4409,
+      46.2979
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "West Richland",
+     "note": "Toward the Tri-Cities.",
+     "at": [
+      -119.3473,
+      46.3004
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/red-mountain.geojson",
+   "bounds": [
+    -119.4878,
+    46.2558,
+    -119.3473,
+    46.3111
+   ],
+   "center": [
+    -119.4175,
+    46.2835
+   ]
+  },
+  {
+   "key": "horse-heaven-hills",
+   "name": "Horse Heaven Hills",
+   "match": "horse heaven",
+   "blurb": "Long south-facing slopes above the Columbia: river winds keep frost and disease away. Home of Champoux Vineyard.",
+   "tour": [
+    {
+     "name": "Prosser",
+     "note": "The northern side of the hills.",
+     "at": [
+      -119.7692,
+      46.2068
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Alderdale",
+     "note": "Near the Champoux Vineyard.",
+     "at": [
+      -119.9209,
+      45.835
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Paterson",
+     "note": "On the Columbia River.",
+     "at": [
+      -119.6028,
+      45.9371
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/horse-heaven-hills.geojson",
+   "bounds": [
+    -120.2001,
+    45.7895,
+    -118.9967,
+    46.2531
+   ],
+   "center": [
+    -119.5984,
+    46.0213
+   ]
+  },
+  {
+   "key": "walla-walla",
+   "name": "Walla Walla Valley",
+   "match": "walla walla",
+   "blurb": "A valley straddling Washington and Oregon, from windblown loess to the cobblestones of The Rocks.",
+   "tour": [
+    {
+     "name": "Lowden",
+     "note": "The western valley.",
+     "at": [
+      -118.5858,
+      46.0562
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Walla Walla",
+     "note": "The town at the foot of the Blue Mountains.",
+     "at": [
+      -118.5174,
+      46.2055
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Milton-Freewater",
+     "note": "The Rocks: basalt cobbles across the Oregon line.",
+     "at": [
+      -118.3878,
+      45.9329
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/walla-walla.geojson",
+   "bounds": [
+    -118.7429,
+    45.8284,
+    -118.098,
+    46.2055
+   ],
+   "center": [
+    -118.4204,
+    46.017
+   ]
+  },
+  {
+   "key": "columbia-valley",
+   "name": "Columbia Valley",
+   "match": "columbia valley|washington|, wa",
+   "blurb": "A vast, dry basin in the rain shadow of the Cascades, shaped by the Ice Age Missoula floods.",
+   "tour": [
+    {
+     "name": "Yakima",
+     "note": "The western edge, near the Cascades.",
+     "at": [
+      -120.5108,
+      46.6016
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Prosser",
+     "note": "The wine town of the Yakima Valley.",
+     "at": [
+      -119.7692,
+      46.2068
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Richland",
+     "note": "Where the Yakima, Snake and Columbia meet.",
+     "at": [
+      -119.2752,
+      46.2804
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Walla Walla",
+     "note": "The eastern edge, by the Blue Mountains.",
+     "at": [
+      -118.5174,
+      46.2055
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/columbia-valley.geojson",
+   "bounds": [
+    -121.2971,
+    45.2184,
+    -117.0355,
+    48.2921
+   ],
+   "center": [
+    -119.1663,
+    46.7553
+   ]
+  },
+  {
+   "key": "willamette-valley",
+   "name": "Willamette Valley",
+   "match": "willamette|oregon|, or",
+   "blurb": "Marine air through the Van Duzer corridor and volcanic Jory soils: Oregon Pinot Noir and Pinot Gris.",
+   "tour": [
+    {
+     "name": "Newberg",
+     "note": "The Chehalem Mountains.",
+     "at": [
+      -122.9728,
+      45.3003
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Dundee",
+     "note": "The red Jory soils of the Dundee Hills.",
+     "at": [
+      -123.0109,
+      45.2782
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "McMinnville",
+     "note": "Home of the International Pinot Noir Celebration.",
+     "at": [
+      -123.1945,
+      45.21
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Eola-Amity Hills",
+     "note": "Cooled by wind through the Van Duzer corridor.",
+     "at": [
+      -123.2056,
+      45.1181
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Salem",
+     "note": "The southern end of the northern valley.",
+     "at": [
+      -123.0331,
+      44.9392
+     ],
+     "src": "osm"
+    }
+   ],
+   "outline": "data/outlines/willamette-valley.geojson",
+   "bounds": [
+    -123.7319,
+    43.5761,
+    -122.1285,
+    45.7672
+   ],
+   "center": [
+    -122.9302,
+    44.6717
+   ]
+  },
+  {
+   "key": "uco-valley",
+   "name": "Uco Valley · Gualtallary",
+   "match": "gualtallary|uco|mendoza",
+   "blurb": "High-altitude Malbec under the Andes (Gualtallary reaches 1,500 m): limestone, intense light, cold nights.",
+   "tour": [
+    {
+     "name": "Mendoza",
+     "note": "The oasis city, watered by Andean snowmelt.",
+     "at": [
+      -68.8458,
+      -32.8895
+     ],
+     "src": "hand"
+    },
+    {
+     "name": "Tupungato",
+     "note": "The northern Uco Valley.",
+     "at": [
+      -69.147,
+      -33.373
+     ],
+     "src": "hand"
+    },
+    {
+     "name": "Gualtallary",
+     "note": "Among the highest vineyards in Mendoza.",
+     "at": [
+      -69.2771,
+      -33.3853
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Tupungato volcano",
+     "note": "A 6,570 m peak on the Chilean border.",
+     "at": [
+      -69.7695,
+      -33.3579
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    -69.7695,
+    -33.3853,
+    -68.8458,
+    -32.8895
+   ],
+   "center": [
+    -69.3076,
+    -33.1374
+   ]
+  },
+  {
+   "key": "western-cape",
+   "name": "Western Cape",
+   "match": "western cape|south africa|stellenbosch|swartland",
+   "blurb": "Cape mountains and two oceans: Chenin Blanc is the Cape's signature, from old bush vines.",
+   "tour": [
+    {
+     "name": "Cape Town",
+     "note": "Table Mountain and the Atlantic.",
+     "at": [
+      18.4172,
+      -33.9288
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Stellenbosch",
+     "note": "Granite mountains cooled by False Bay.",
+     "at": [
+      18.8692,
+      -33.9344
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Franschhoek",
+     "note": "The Huguenots' valley.",
+     "at": [
+      19.1194,
+      -33.9092
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Paarl",
+     "note": "Granite domes and warm valley floors.",
+     "at": [
+      18.9642,
+      -33.731
+     ],
+     "src": "osm"
+    },
+    {
+     "name": "Swartland",
+     "note": "Dry-farmed old Chenin on shale and granite.",
+     "at": [
+      18.7236,
+      -33.4603
+     ],
+     "src": "osm"
+    }
+   ],
+   "bounds": [
+    18.4172,
+    -33.9344,
+    19.1194,
+    -33.4603
+   ],
+   "center": [
+    18.7683,
+    -33.6973
+   ]
+  },
+  {
+   "key": "france",
+   "name": "France",
+   "match": "^france$",
+   "blurb": "A Vin de France: grapes that can come from anywhere in the country.",
+   "zoom": 4.6,
+   "tour": [],
+   "center": [
+    1.8883,
+    46.6034
+   ]
+  }
+ ]
+}

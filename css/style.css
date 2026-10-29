@@ -49,6 +49,7 @@ body.drawer-open { overflow: hidden; }
 @media (min-width: 1280px) { body.drawer-open { overflow: auto; } }
 
 a { color: var(--gold); }
+a.icon-btn { text-decoration: none; }
 code, kbd {
   font: 500 0.82em/1 ui-monospace, 'SF Mono', Menlo, monospace;
   letter-spacing: 0.02em;
@@ -399,9 +400,23 @@ p { margin: 0; }
 .d-notes .entry { padding: 12px 14px; margin-bottom: 10px; background: var(--surface-2); }
 .pre { white-space: pre-wrap; }
 
-.teaser { margin-top: 18px; padding: 18px !important; border: 1px dashed var(--line-2) !important; border-radius: 14px; background: radial-gradient(400px 160px at 100% 0%, rgba(157, 187, 224, 0.1), transparent); }
-.teaser h3 { color: var(--info); }
-.teaser p { font-size: 13.5px; color: var(--muted); }
+.teaser {
+  position: relative; display: grid; gap: 4px; margin-top: 18px; padding: 20px 52px 20px 20px; border-radius: 16px;
+  color: var(--text); text-decoration: none; overflow: hidden; border: 1px solid rgba(157, 187, 224, 0.22);
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,.6), transparent 60%),
+    radial-gradient(1px 1px at 70% 20%, rgba(255,255,255,.4), transparent 60%),
+    radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,.5), transparent 60%),
+    radial-gradient(420px 180px at 100% 120%, rgba(214, 178, 116, 0.22), transparent 70%),
+    linear-gradient(160deg, #0d1324, #120e18);
+  transition: transform .2s, border-color .2s;
+}
+.teaser:hover { border-color: rgba(214, 178, 116, 0.55); transform: translateY(-1px); }
+.teaser-kicker { font: 600 11px var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--info); }
+.teaser-title { font: 600 26px/1.1 var(--serif); }
+.teaser-text { font-size: 13px; color: var(--muted); }
+.teaser-go { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 22px; color: var(--gold); transition: transform .2s; }
+.teaser:hover .teaser-go { transform: translate(4px, -50%); }
 
 /* ---------- dialog / forms ---------- */
 dialog {

@@ -448,7 +448,7 @@ function renderJournal() {
 function openDrawer(id, slot = null) {
   ui.selected = id;
   ui.focusSlot = slot;
-  history.replaceState(null, '', `#wine=${id}`);
+  if (location.hash !== `#wine=${id}`) history.replaceState(null, '', `#wine=${id}`);
   $('#drawer').hidden = false;
   $('#scrim').hidden = false;
   document.body.classList.add('drawer-open');
@@ -519,10 +519,12 @@ function renderDrawer() {
         <p>${esc(w.good_pairings)}</p>
       </section>
 
-      <section class="teaser">
-        <h3>Explore ${esc(w.region.split(',')[0])}</h3>
-        <p>A 3D flyover of the vineyards and how the ${esc(w.vintage || 'vintage')} growing season compared with an average year. Coming soon.</p>
-      </section>
+      <a class="teaser" href="#explore=${w.id}">
+        <span class="teaser-kicker">Explore in 3D</span>
+        <span class="teaser-title">${esc(w.region.split(/[,/]/)[0].trim())}</span>
+        <span class="teaser-text">Fly over the vineyards, then see how the ${esc(/^\d{4}$/.test(w.vintage) ? w.vintage : 'latest')} growing season compared with normal and with the great years.</span>
+        <span class="teaser-go" aria-hidden="true">→</span>
+      </a>
     </div>`;
 }
 
@@ -821,7 +823,8 @@ function bind() {
       e.preventDefault();
       $('#q').focus();
     } else if (e.key === 'Escape' && !$('#dialog').open) {
-      if (ui.placing) stopPlacing();
+      if (/explore=|globe/.test(location.hash)) location.hash = ui.selected ? `wine=${ui.selected}` : '';
+      else if (ui.placing) stopPlacing();
       else if (ui.selected) closeDrawer();
     } else if ((e.key === 'Enter' || e.key === ' ') && e.target.matches?.('.map [data-slot]')) {
       e.preventDefault();
@@ -851,9 +854,40 @@ function bind() {
   window.addEventListener('online', () => store.flush());
 }
 
-function openFromHash() {
-  const m = /wine=([\w-]+)/.exec(location.hash);
-  if (m && store.byId(m[1]) && ui.selected !== m[1]) openDrawer(m[1]);
+// ---------- explore (3D region + vintage weather), loaded on demand ----------
+
+let explore;
+const exploreOptions = () => ({
+  wines: store.wines,
+  styleOf: style,
+  onClose: () => (location.hash = ui.selected ? `wine=${ui.selected}` : ''),
+  onGlobe: () => (location.hash = 'globe'),
+  onOpenWine: (id) => (location.hash = `explore=${id}`),
+  onPickPlace: async (key) => {
+    const { placeFor } = await import('./explore/places.js');
+    for (const w of store.wines.filter((x) => x.bottles > 0)) {
+      if ((await placeFor(w))?.key === key) return (location.hash = `explore=${w.id}`);
+    }
+  },
+});
+
+async function openFromHash() {
+  const h = location.hash;
+  const ex = /explore=([\w-]+)/.exec(h);
+  if (ex || h === '#globe') {
+    explore ||= await import('./explore/explore.js');
+    $('#tooltip').hidden = true;
+    if (ex && store.byId(ex[1])) {
+      ui.selected = ex[1];
+      return explore.openExplore(store.byId(ex[1]), exploreOptions());
+    }
+    if (h === '#globe') return explore.openGlobe(exploreOptions());
+  }
+  explore?.closeExplore();
+  const m = /wine=([\w-]+)/.exec(h);
+  if (m && store.byId(m[1])) {
+    if (ui.selected !== m[1] || $('#drawer').hidden) openDrawer(m[1]);
+  }
 }
 
 bind();

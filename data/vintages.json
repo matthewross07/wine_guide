@@ -1,0 +1,91 @@
+{
+  "_readme": [
+    "Vintage quality by region family, used for the 'great years' comparisons in Explore.",
+    "Tiers: 5 exceptional · 4 excellent · 3 good · 2 mixed · 1 difficult. Missing years = not rated.",
+    "These are approximate consensus tiers assembled from widely published vintage charts",
+    "(Wine Spectator, Wine Advocate, Jancis Robinson, regional consortia). They are a starting point:",
+    "edit freely, especially as you form your own opinions.",
+    "`match` is a case-insensitive regex tested against `region` and then `wine_name`; first family wins."
+  ],
+  "tiers": {
+    "5": "Exceptional",
+    "4": "Excellent",
+    "3": "Good",
+    "2": "Mixed",
+    "1": "Difficult"
+  },
+  "families": [
+    {
+      "key": "champagne", "name": "Champagne", "match": "champagne|chouilly|c[oô]te des (blancs|bar)",
+      "years": { "1996": 5, "1998": 4, "1999": 3, "2002": 5, "2004": 4, "2005": 2, "2006": 4, "2007": 3, "2008": 5, "2009": 3, "2010": 2, "2011": 1, "2012": 4, "2013": 4, "2014": 3, "2015": 3, "2016": 3, "2017": 1, "2018": 4, "2019": 4, "2020": 4, "2021": 1, "2022": 4, "2023": 3 }
+    },
+    {
+      "key": "bordeaux", "name": "Bordeaux", "match": "bordeaux|m[eé]doc|pomerol|[eé]milion|castillon|bourg|saint-est[eè]phe|pauillac|margaux|graves",
+      "years": { "1995": 4, "1996": 4, "1997": 2, "1998": 4, "1999": 3, "2000": 5, "2001": 3, "2002": 2, "2003": 3, "2004": 3, "2005": 5, "2006": 3, "2007": 2, "2008": 3, "2009": 5, "2010": 5, "2011": 3, "2012": 3, "2013": 1, "2014": 3, "2015": 5, "2016": 5, "2017": 3, "2018": 5, "2019": 5, "2020": 5, "2021": 2, "2022": 5, "2023": 4, "2024": 2 }
+    },
+    {
+      "key": "rhone-south", "name": "Southern Rhône", "match": "ch[aâ]teauneuf|southern rh[oô]ne|gigondas|vacqueyras|c[oô]tes du rh[oô]ne",
+      "years": { "1998": 5, "1999": 3, "2000": 4, "2001": 5, "2002": 1, "2003": 3, "2004": 3, "2005": 4, "2006": 4, "2007": 5, "2008": 2, "2009": 4, "2010": 5, "2011": 3, "2012": 4, "2013": 2, "2014": 2, "2015": 4, "2016": 5, "2017": 4, "2018": 3, "2019": 5, "2020": 4, "2021": 2, "2022": 4, "2023": 3 }
+    },
+    {
+      "key": "rhone-north", "name": "Northern Rhône", "match": "northern rh[oô]ne|seyssuel|c[oô]te-r[oô]tie|hermitage|cornas|saint-joseph|crozes|condrieu",
+      "years": { "1999": 5, "2000": 3, "2001": 4, "2002": 1, "2003": 4, "2005": 4, "2006": 4, "2007": 3, "2008": 2, "2009": 5, "2010": 5, "2011": 3, "2012": 4, "2013": 3, "2014": 3, "2015": 5, "2016": 4, "2017": 4, "2018": 4, "2019": 5, "2020": 4, "2021": 2, "2022": 4, "2023": 4 }
+    },
+    {
+      "key": "beaujolais", "name": "Beaujolais", "match": "beaujolais|morgon|juli[eé]nas|fleurie|moulin-[aà]-vent|ch[eé]nas|brouilly|r[eé]gni[eé]",
+      "years": { "2009": 5, "2010": 4, "2011": 4, "2012": 2, "2013": 2, "2014": 4, "2015": 5, "2016": 3, "2017": 4, "2018": 4, "2019": 4, "2020": 5, "2021": 2, "2022": 4, "2023": 4 }
+    },
+    {
+      "key": "burgundy", "name": "Burgundy", "match": "burgund|bourgogne|c[oô]te d'or|chablis",
+      "years": { "2005": 5, "2009": 4, "2010": 5, "2012": 4, "2014": 4, "2015": 5, "2016": 3, "2017": 4, "2018": 4, "2019": 5, "2020": 4, "2021": 2, "2022": 4, "2023": 3 }
+    },
+    {
+      "key": "loire", "name": "Loire", "match": "loire|sancerre|vouvray|touraine|muscadet|chinon",
+      "years": { "2014": 4, "2015": 4, "2016": 3, "2017": 3, "2018": 5, "2019": 4, "2020": 5, "2021": 2, "2022": 4, "2023": 3, "2024": 2 }
+    },
+    {
+      "key": "alsace", "name": "Alsace", "match": "alsace",
+      "years": { "2015": 4, "2016": 3, "2017": 5, "2018": 4, "2019": 4, "2020": 4, "2021": 3, "2022": 4, "2023": 3, "2024": 3 }
+    },
+    {
+      "key": "piedmont", "name": "Piedmont", "match": "piedmont|piemonte|barolo|barbaresco|roero|langhe|la morra",
+      "years": { "1996": 5, "1997": 4, "1998": 4, "1999": 4, "2000": 4, "2001": 5, "2002": 1, "2003": 2, "2004": 5, "2005": 3, "2006": 5, "2007": 4, "2008": 4, "2009": 3, "2010": 5, "2011": 3, "2012": 3, "2013": 5, "2014": 2, "2015": 4, "2016": 5, "2017": 3, "2018": 3, "2019": 5, "2020": 4, "2021": 5, "2022": 3, "2023": 4 }
+    },
+    {
+      "key": "tuscany", "name": "Tuscany", "match": "tuscany|toscana|montalcino|brunello|chianti|bolgheri|val d'arno",
+      "years": { "1997": 5, "1999": 4, "2001": 4, "2002": 1, "2003": 2, "2004": 5, "2005": 2, "2006": 5, "2007": 4, "2008": 3, "2009": 3, "2010": 5, "2011": 3, "2012": 4, "2013": 4, "2014": 2, "2015": 5, "2016": 5, "2017": 2, "2018": 3, "2019": 5, "2020": 4, "2021": 5, "2022": 3, "2023": 3 }
+    },
+    {
+      "key": "rioja", "name": "Rioja", "match": "rioja",
+      "years": { "1994": 5, "1995": 4, "1996": 3, "2001": 5, "2004": 5, "2005": 4, "2010": 5, "2011": 4, "2012": 3, "2013": 2, "2014": 3, "2015": 4, "2016": 4, "2017": 3, "2018": 3, "2019": 5, "2020": 3, "2021": 4, "2022": 3 }
+    },
+    {
+      "key": "ribera", "name": "Ribera del Duero", "match": "ribera",
+      "years": { "2004": 5, "2005": 4, "2009": 4, "2010": 4, "2011": 4, "2012": 4, "2013": 2, "2014": 3, "2015": 4, "2016": 5, "2017": 2, "2018": 3, "2019": 5, "2020": 4, "2021": 3, "2022": 3 }
+    },
+    {
+      "key": "napa-sonoma", "name": "Napa & Sonoma", "match": "napa|sonoma|alexander valley|chalk hill|russian river|northern california",
+      "years": { "1994": 5, "1997": 5, "2001": 5, "2002": 4, "2005": 4, "2007": 5, "2008": 3, "2009": 4, "2010": 3, "2011": 2, "2012": 4, "2013": 5, "2014": 4, "2015": 4, "2016": 5, "2017": 3, "2018": 5, "2019": 5, "2020": 1, "2021": 5, "2022": 3, "2023": 4 }
+    },
+    {
+      "key": "central-coast", "name": "California Central Coast", "match": "paso robles|central coast|san benito|lime kiln|santa barbara|monterey",
+      "years": { "2016": 4, "2017": 3, "2018": 4, "2019": 4, "2020": 2, "2021": 4, "2022": 3, "2023": 4 }
+    },
+    {
+      "key": "washington", "name": "Washington", "match": "washington|, wa|columbia valley|red mountain|horse heaven|walla walla|yakima",
+      "years": { "2005": 4, "2007": 4, "2010": 3, "2011": 2, "2012": 5, "2013": 4, "2014": 4, "2015": 4, "2016": 4, "2017": 4, "2018": 5, "2019": 4, "2020": 3, "2021": 4, "2022": 4, "2023": 4 }
+    },
+    {
+      "key": "oregon", "name": "Oregon", "match": "oregon|, or|willamette",
+      "years": { "2008": 5, "2010": 4, "2011": 3, "2012": 5, "2013": 3, "2014": 4, "2015": 4, "2016": 4, "2017": 4, "2018": 5, "2019": 3, "2020": 2, "2021": 5, "2022": 4, "2023": 4 }
+    },
+    {
+      "key": "mendoza", "name": "Mendoza", "match": "mendoza|uco|gualtallary|lujan|argentina",
+      "years": { "2010": 4, "2011": 4, "2012": 3, "2013": 4, "2014": 3, "2015": 4, "2016": 2, "2017": 4, "2018": 5, "2019": 5, "2020": 4, "2021": 4, "2022": 4, "2023": 3 }
+    },
+    {
+      "key": "south-africa", "name": "South Africa", "match": "south africa|western cape|stellenbosch|swartland",
+      "years": { "2015": 5, "2016": 3, "2017": 5, "2018": 3, "2019": 4, "2020": 4, "2021": 4, "2022": 4, "2023": 3 }
+    }
+  ]
+}
